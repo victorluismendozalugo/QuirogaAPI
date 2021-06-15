@@ -11,7 +11,7 @@ namespace apiQuiroga.Modules
 
       private object GetRoot()
       {
-         return Response.AsJson("La api Quiroga se encuentra funcionando ... :)");
+         return Response.AsJson("Servicios API funcionando... :)");
       }
    }
 }
