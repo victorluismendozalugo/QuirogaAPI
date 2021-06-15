@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "apiQuiroga", "apiQuiroga\apiQuiroga.csproj", "{8E10A46F-C4E0-4A1A-82A1-BC443BB7DD8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "apiQuiroga.DA", "apiQuiroga.DA\apiQuiroga.DA.csproj", "{F9C66A5F-9FAE-4B6E-B639-D86158060983}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "apiQuiroga.Models", "apiQuiroga.Models\apiQuiroga.Models.csproj", "{CF0BFD64-9941-47D0-AE9C-08299371D800}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8E10A46F-C4E0-4A1A-82A1-BC443BB7DD8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E10A46F-C4E0-4A1A-82A1-BC443BB7DD8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E10A46F-C4E0-4A1A-82A1-BC443BB7DD8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E10A46F-C4E0-4A1A-82A1-BC443BB7DD8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9C66A5F-9FAE-4B6E-B639-D86158060983}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9C66A5F-9FAE-4B6E-B639-D86158060983}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9C66A5F-9FAE-4B6E-B639-D86158060983}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9C66A5F-9FAE-4B6E-B639-D86158060983}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF0BFD64-9941-47D0-AE9C-08299371D800}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF0BFD64-9941-47D0-AE9C-08299371D800}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF0BFD64-9941-47D0-AE9C-08299371D800}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF0BFD64-9941-47D0-AE9C-08299371D800}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {604F32AF-430B-42A6-BD78-CF8D4BDE4D05}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://dev.azure.com/kragsolutions
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = apiQuiroga\\apiQuiroga.csproj
+		SccProjectName1 = apiQuiroga
+		SccLocalPath1 = apiQuiroga
+		SccProjectUniqueName2 = apiQuiroga.DA\\apiQuiroga.DA.csproj
+		SccProjectName2 = apiQuiroga.DA
+		SccLocalPath2 = apiQuiroga.DA
+		SccProjectUniqueName3 = apiQuiroga.Models\\apiQuiroga.Models.csproj
+		SccProjectName3 = apiQuiroga.Models
+		SccLocalPath3 = apiQuiroga.Models
+	EndGlobalSection
+EndGlobal

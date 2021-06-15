@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Configuracion>
+  <Parametros>
+    <!--aqui va la api key-->
+    <Parametro nombre="api-key" valor="123" />
+  </Parametros>
+  <Conexiones>
+    <CadenaConexion nombre="Conexion" valor="§É¨Ï‡£â–µË™Ž¤P·f–³ˆ½·]ÂZž†¦³k“Š±Ñ¨×Èœ“„¤Ü•ÚÖ—“^c¹©×ÙŸÚ‚šÍ–ÍË•é\cÝ§ÓÙPÜ…c¥TáÈk“‘¤Û§åÖ¢×A€ˆuÒÔ£Ü”sŸ" />
+  </Conexiones>
+</Configuracion>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="OrdenCompra"
+    targetNamespace="http://tempuri.org/OrdenCompra.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://tempuri.org/OrdenCompra.xsd"
+    xmlns:mstns="http://tempuri.org/OrdenCompra.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+
+  <xs:element name="Cabecero">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="clavePedido" type="xs:int"/>
+        <xs:element name="fechaPedido" type="xs:string"/>
+        <xs:element name="fechaRecibo" type="xs:string"/>
+        <xs:element name="nombreProveedor" type="xs:string"/>
+        <xs:element name="plazo" type="xs:int"/>
+        <xs:element name="importeTotal" type="xs:decimal"/>
+        <xs:element name="iva" type="xs:decimal"/>
+        <xs:element name="descuentoEspecial" type="xs:decimal"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Detalle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="claveProducto" type="xs:string"/>
+        <xs:element name="nombreProducto" type="xs:string"/>
+        <xs:element name="cantidadSolicitada" type="xs:int"/>
+        <xs:element name="iva" type="xs:decimal"/>
+        <xs:element name="subTotal" type="xs:decimal"/>
+        <xs:element name="subTotalIVA" type="xs:decimal"/>
+        <xs:element name="totalLinea" type="xs:decimal"/>
+        <xs:element name="costoPactado" type="xs:decimal"/>
+        <xs:element name="cantidadSCargo" type="xs:int"/>
+        <xs:element name="codigoBarras" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

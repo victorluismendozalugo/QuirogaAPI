@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Configuracion>
+  <Parametros>
+    <Parametro nombre="api-key" valor="123" />
+  </Parametros>
+  <Conexiones>
+    <CadenaConexion nombre="Conexion" valor="data source=quirogadelnoroeste.servehttp.com,14334; initial catalog=Quiroga; user id=sa; password=3lDorado" />
+  </Conexiones>
+</Configuracion>
