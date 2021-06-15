@@ -362,3 +362,6 @@ FodyWeavers.xsd
 WebSites/bin/ServerConnections.xml
 Quiroga/QuirogaAPI/apiQuiroga/bin/Config.xml
 QuirogaAPI/apiQuiroga/bin/Config.xml
+*.dll
+*.xml
+*.rar
