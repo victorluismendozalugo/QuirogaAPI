@@ -2,9 +2,9 @@
 <Configuracion>
   <Parametros>
     <!--aqui va la api key-->
-    <Parametro nombre="api-key" valor="123" />
+    <Parametro nombre="api-key" valor="Conexion" />
   </Parametros>
   <Conexiones>
-    <CadenaConexion nombre="Conexion" valor="§É¨Ï‡£â–µË™Ž¤P·f–³ˆ½·]ÂZž†¦³k“Š±Ñ¨×Èœ“„¤Ü•ÚÖ—“^c¹©×ÙŸÚ‚šÍ–ÍË•é\cÝ§ÓÙPÜ…c¥TáÈk“‘¤Û§åÖ¢×A€ˆuÒÔ£Ü”sŸ" />
+    <CadenaConexion nombre="Conexion" valor="§É¨Ï‡£â–µË™Ž¤Pä–¬Ú£ÕÈ”Ø±×¦ÝÌ£ç†qÛ™àÝ•Û•·ØbÑÖ®A¬ÖâÐ‘ßA¦É¨ÏÓŸÚA€ˆ…ãÐ¢âˆ¤¿™ÐÆ”Ø—~ˆ©áÌ¢“Š§ˆqŽÚ‘®A³É§áÞŸå…c¥T¡Ótâ“¤Ì£" />
   </Conexiones>
 </Configuracion>

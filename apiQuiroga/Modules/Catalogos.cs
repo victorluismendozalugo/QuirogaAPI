@@ -17,25 +17,25 @@ namespace apiQuiroga.Modules
 
         public Catalogos() : base("/catalogo")
         {
-            Before += ctx =>
-            {
-                if (!ctx.Request.Headers.Keys.Contains("api-key"))
-                {
-                    return HttpStatusCode.Unauthorized;
-                }
-                else
-                {
-                    var apikey = ctx.Request.Headers["api-key"].FirstOrDefault() ?? string.Empty;
-                    if (apikey != Globales.ApiKey)
-                    {
-                        return HttpStatusCode.Unauthorized;
-                    }
-                    else
-                    {
-                        return null;
-                    }
-                }
-            };
+            //Before += ctx =>
+            //{
+            //    if (!ctx.Request.Headers.Keys.Contains("api-key"))
+            //    {
+            //        return HttpStatusCode.Unauthorized;
+            //    }
+            //    else
+            //    {
+            //        var apikey = ctx.Request.Headers["api-key"].FirstOrDefault() ?? string.Empty;
+            //        if (apikey != Globales.ApiKey)
+            //        {
+            //            return HttpStatusCode.Unauthorized;
+            //        }
+            //        else
+            //        {
+            //            return null;
+            //        }
+            //    }
+            //};
             //this.RequiresAuthentication();
 
             _DACatalogos = new DACatalogos();
@@ -346,7 +346,7 @@ namespace apiQuiroga.Modules
             {
                 LaboratoriosModel p = this.Bind();
 
-                var r = _DACatalogos.Laboratorios();
+                var r = _DACatalogos.Laboratorios(p.LaboratorioID);
 
                 return Response.AsJson(new Result<DataModel>()
                 {

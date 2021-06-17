@@ -298,26 +298,26 @@ namespace apiQuiroga.DA
         //    }
         //}
 
-        public Result<DataModel> Laboratorios()
+        public Result<DataModel> Laboratorios(int LaboratorioID)
         {
             var parametros = new ConexionParameters();
             try
             {
-                //parametros.Add("@pIDLaboratorio", ConexionDbType.Int, idLaboratorio);
+                parametros.Add("@pIDLaboratorio", ConexionDbType.Int, LaboratorioID);
                 parametros.Add("@pResultado", ConexionDbType.Bit, System.Data.ParameterDirection.Output);
-                parametros.Add("@pMensaje", ConexionDbType.VarChar, 300, System.Data.ParameterDirection.Output, 300);
-                //parametros.Add("@pCodError", ConexionDbType.Int, System.Data.ParameterDirection.Output);
+                parametros.Add("@pMsg", ConexionDbType.VarChar, 300, System.Data.ParameterDirection.Output, 300);
+                parametros.Add("@pCodError", ConexionDbType.Int, System.Data.ParameterDirection.Output);
 
                 var r = _conexion.ExecuteWithResults<LaboratoriosModel>("QW_procLaboratoriosCon", parametros);
 
                 return new Result<DataModel>()
                 {
-                    //Value = parametros.Value("@pResultado").ToBoolean(),
-                    Message = parametros.Value("@pMensaje").ToString(),
+                    Value = parametros.Value("@pResultado").ToBoolean(),
+                    Message = parametros.Value("@pMsg").ToString(),
                     Data = new DataModel()
                     {
-                        //CodigoError = parametros.Value("@pCodError").ToInt32(),
-                        MensajeBitacora = parametros.Value("@pMensaje").ToString(),
+                        CodigoError = parametros.Value("@pCodError").ToInt32(),
+                        MensajeBitacora = parametros.Value("@pMsg").ToString(),
                         Data = r.Data
                     }
                 };
