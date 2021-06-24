@@ -10,7 +10,7 @@ namespace apiQuiroga.Models.Movimientos
     {
         #region ordenCompraCabecero
         public int claveEmpresa { get; set; }
-        public int claveOrdern { get; set; }
+        public int claveOrden { get; set; }
         public string claveFactura { get; set; }
         public int claveProvedor { get; set; }
         public int plazo { get; set; }
@@ -25,7 +25,6 @@ namespace apiQuiroga.Models.Movimientos
         public string fechaRegistro { get; set; }
 
         #endregion ordenCompraCabecero
-
         #region ordenCompraDetalle
         public int claveProducto { get; set; }
         public decimal costoPactado { get; set; }
@@ -45,6 +44,5 @@ namespace apiQuiroga.Models.Movimientos
         public decimal totalLinea { get; set; }
 
         #endregion ordenCompraDetalle
-
     }   
 }

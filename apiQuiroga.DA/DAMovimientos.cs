@@ -23,6 +23,180 @@ namespace apiQuiroga.DA
         }
 
 
+        //Obtiene los datos de las ordenes de compra - el llamado se hace desde Modules Movimientos
+        public Result<DataModel> OrdenCompraCon(int claveOrden, int claveEmpresa, string estatus)
+        {
+            var parametros = new ConexionParameters();
+            try
+            {
+                parametros.Add("@pClaveEmpresa", ConexionDbType.Int, claveEmpresa);
+                parametros.Add("@pClaveOrden", ConexionDbType.Int, claveOrden);
+                parametros.Add("@pEstatus", ConexionDbType.VarChar, estatus);
+                parametros.Add("@pResultado", ConexionDbType.Bit, System.Data.ParameterDirection.Output);
+                parametros.Add("@pMsg", ConexionDbType.VarChar, 300, System.Data.ParameterDirection.Output, 300);
+                parametros.Add("@pCodError", ConexionDbType.Int, System.Data.ParameterDirection.Output);
+
+                var r = _conexion.ExecuteWithResults<OrdenCompraModel>("QW_procOrdenCompraCon", parametros);
+
+                return new Result<DataModel>()
+                {
+                    Value = parametros.Value("@pResultado").ToBoolean(),
+                    Message = parametros.Value("@pMsg").ToString(),
+                    Data = new DataModel()
+                    {
+                        CodigoError = parametros.Value("@pCodError").ToInt32(),
+                        MensajeBitacora = parametros.Value("@pMsg").ToString(),
+                        Data = r.Data
+                    }
+                };
+            }
+            catch (Exception ex)
+            {
+                return new Result<DataModel>()
+                {
+                    Value = false,
+                    Message = "Problemas al obtener el detalle de la(s) orden(es)",
+                    Data = new DataModel()
+                    {
+                        CodigoError = 101,
+                        MensajeBitacora = ex.Message,
+                        Data = ""
+                    }
+                };
+            }
+        }
+        //obtiene el detalle de la orden de compra - el llamado se hace desde Modules Movimientos
+        public Result<DataModel> OrdenCompraDetalleCon(int claveOrden, int claveEmpresa, string estatus)
+        {
+            var parametros = new ConexionParameters();
+            try
+            {
+                parametros.Add("@pClaveEmpresa", ConexionDbType.Int, claveEmpresa);
+                parametros.Add("@pClaveOrden", ConexionDbType.Int, claveOrden);
+                parametros.Add("@pEstatus", ConexionDbType.VarChar, estatus);
+                parametros.Add("@pResultado", ConexionDbType.Bit, System.Data.ParameterDirection.Output);
+                parametros.Add("@pMsg", ConexionDbType.VarChar, 300, System.Data.ParameterDirection.Output, 300);
+                parametros.Add("@pCodError", ConexionDbType.Int, System.Data.ParameterDirection.Output);
+
+                var r = _conexion.ExecuteWithResults<OrdenCompraModel>("QW_procOrdenCompraDetalleCon", parametros);
+
+                return new Result<DataModel>()
+                {
+                    Value = parametros.Value("@pResultado").ToBoolean(),
+                    Message = parametros.Value("@pMsg").ToString(),
+                    Data = new DataModel()
+                    {
+                        CodigoError = parametros.Value("@pCodError").ToInt32(),
+                        MensajeBitacora = parametros.Value("@pMsg").ToString(),
+                        Data = r.Data
+                    }
+                };
+            }
+            catch (Exception ex)
+            {
+                return new Result<DataModel>()
+                {
+                    Value = false,
+                    Message = "Problemas al obtener el detalle de la(s) orden(es)",
+                    Data = new DataModel()
+                    {
+                        CodigoError = 101,
+                        MensajeBitacora = ex.Message,
+                        Data = ""
+                    }
+                };
+            }
+        }
+
+        //guarda las Ordenes de compra
+        public Result<DataModel> OrdenCompraGuardar(OrdenCompraModel ordenCompra)
+        {
+            var parametros = new ConexionParameters();
+            var xml = ordenCompra.ToXml("root");
+            try
+            {
+                parametros.Add("@pDatosXML", ConexionDbType.Xml, xml);
+                parametros.Add("@pResultado", ConexionDbType.Bit, System.Data.ParameterDirection.Output);
+                parametros.Add("@pMsg", ConexionDbType.VarChar, 300, System.Data.ParameterDirection.Output, 300);
+                parametros.Add("@pCodError", ConexionDbType.Int, System.Data.ParameterDirection.Output);
+                parametros.Add("@pMovimiento", ConexionDbType.Int, System.Data.ParameterDirection.Output);
+
+                var r = _conexion.Execute("QW_procOrdenCompraGuardar", parametros);
+
+                return new Result<DataModel>()
+                {
+                    Value = parametros.Value("@pResultado").ToBoolean(),
+                    Message = parametros.Value("@pMsg").ToString(),
+                    Data = new DataModel()
+                    {
+                        CodigoError = parametros.Value("@pCodError").ToInt32(),
+                        MensajeBitacora = parametros.Value("@pMsg").ToString(),
+                        CodigoMovimiento = parametros.Value("@pMovimiento").ToInt32(),
+                        Data = r.Data
+                    }
+                };
+            }
+            catch (Exception ex)
+            {
+                return new Result<DataModel>()
+                {
+                    Value = false,
+                    Message = "Problemas al guardar la orden de compra",
+                    Data = new DataModel()
+                    {
+                        CodigoError = 101,
+                        MensajeBitacora = ex.Message,
+                        Data = ""
+                    }
+                };
+            }
+        }
+       
+        //guarda el detalle de las Ordenes de compra
+        public Result<DataModel> OrdenCompraDetalleGuardar(OrdenCompraModel ordenCompra)
+        {
+            var parametros = new ConexionParameters();
+            var xml = ordenCompra.ToXml("root");
+            try
+            {
+                parametros.Add("@pDatosXML", ConexionDbType.Xml, xml);
+                parametros.Add("@pResultado", ConexionDbType.Bit, System.Data.ParameterDirection.Output);
+                parametros.Add("@pMsg", ConexionDbType.VarChar, 300, System.Data.ParameterDirection.Output, 300);
+                parametros.Add("@pCodError", ConexionDbType.Int, System.Data.ParameterDirection.Output);
+
+                var r = _conexion.Execute("QW_procOrdenCompraDetGuardar", parametros);
+
+                return new Result<DataModel>()
+                {
+                    Value = parametros.Value("@pResultado").ToBoolean(),
+                    Message = parametros.Value("@pMsg").ToString(),
+                    Data = new DataModel()
+                    {
+                        CodigoError = parametros.Value("@pCodError").ToInt32(),
+                        MensajeBitacora = parametros.Value("@pMsg").ToString(),
+                        Data = r.Data
+                    }
+                };
+            }
+            catch (Exception ex)
+            {
+                return new Result<DataModel>()
+                {
+                    Value = false,
+                    Message = "Problemas al guardar detalle de orden de compra",
+                    Data = new DataModel()
+                    {
+                        CodigoError = 101,
+                        MensajeBitacora = ex.Message,
+                        Data = ""
+                    }
+                };
+            }
+        }
+
+
+
+
         public Result<DataModel> Compras(int clavePedido, string estatus)
         {
             var parametros = new ConexionParameters();
