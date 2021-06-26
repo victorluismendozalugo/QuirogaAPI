@@ -30,7 +30,8 @@ namespace apiQuiroga.Models
         //public static string ApiKey => Globales.Configuracion.Parameter("ApiKey", true, "x-api-key").ToString();
 
         //valor true para que desencripte la cadena de conexino
-        public static string ConexionPrincipal => Globales.Configuracion.ConnectionString("Conexion", true);
+        //poner false o quitar el segundo parametro si la cadena no está encriptada
+        public static string ConexionPrincipal => Globales.Configuracion.ConnectionString("Conexion");
         public static string ApiKey => Globales.Configuracion.Parameter("api-key").ToString();
         public static string RutaApp;
 

@@ -5,6 +5,6 @@
     <Parametro nombre="api-key" valor="Conexion" />
   </Parametros>
   <Conexiones>
-    <CadenaConexion nombre="Conexion" valor="§É¨Ï‡£â–µË™Ž¤Pä–¬Ú£ÕÈ”Ø±×¦ÝÌ£ç†qÛ™àÝ•Û•·ØbÑÖ®A¬ÖâÐ‘ßA¦É¨ÏÓŸÚA€ˆ…ãÐ¢âˆ¤¿™ÐÆ”Ø—~ˆ©áÌ¢“Š§ˆqŽÚ‘®A³É§áÞŸå…c¥T¡Ótâ“¤Ì£" />
+    <CadenaConexion nombre="Conexion" valor="data source = quirogadelnoroeste.servehttp.com; initial catalog = QuirogaWeb_dev; user id = sa; password = 3lDorado" />
   </Conexiones>
 </Configuracion>
