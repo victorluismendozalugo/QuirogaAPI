@@ -360,8 +360,9 @@ MigrationBackup/
 FodyWeavers.xsd
 
 WebSites/bin/ServerConnections.xml
-Quiroga/QuirogaAPI/apiQuiroga/bin/Config.xml
-QuirogaAPI/apiQuiroga/bin/Config.xml
+apiQuiroga/bin/Config.xml
+apiQuiroga/dll/dll.rar
+apiQuiroga/dll/config.xml
 *.dll
 *.xml
 *.rar
