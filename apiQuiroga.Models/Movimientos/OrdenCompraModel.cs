@@ -44,5 +44,7 @@ namespace apiQuiroga.Models.Movimientos
         public decimal totalLinea { get; set; }
 
         #endregion ordenCompraDetalle
+
+        public string provRazonSocial { get; set; }
     }   
 }
