@@ -8,7 +8,6 @@ namespace apiQuiroga.Models.Movimientos
 {
     public class OrdenCompraModel
     {
-        #region ordenCompraCabecero
         public int claveEmpresa { get; set; }
         public int claveOrden { get; set; }
         public string claveFactura { get; set; }
@@ -23,9 +22,13 @@ namespace apiQuiroga.Models.Movimientos
         public string estatusOrden { get; set; }
         public int usuarioRegistro { get; set; }
         public string fechaRegistro { get; set; }
+        public string provRazonSocial { get; set; }
+        public List<OrdenDetalleModel> ordenDetalle { get; set; }
+    }
 
-        #endregion ordenCompraCabecero
-        #region ordenCompraDetalle
+    public class OrdenDetalleModel
+    {
+
         public int claveProducto { get; set; }
         public decimal costoPactado { get; set; }
         public decimal costoUnitario { get; set; }
@@ -42,9 +45,5 @@ namespace apiQuiroga.Models.Movimientos
         public decimal subTotalIVA { get; set; }
         public decimal subTotal { get; set; }
         public decimal totalLinea { get; set; }
-
-        #endregion ordenCompraDetalle
-
-        public string provRazonSocial { get; set; }
-    }   
+    }
 }
