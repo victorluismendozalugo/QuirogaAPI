@@ -1,4 +1,4 @@
-﻿using apiQuiroga.Models.Usuario;
+﻿    using apiQuiroga.Models.Usuario;
 using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
@@ -31,7 +31,7 @@ namespace apiQuiroga.Models
 
         //valor true para que desencripte la cadena de conexino
         //poner false o quitar el segundo parametro si la cadena no está encriptada
-        public static string ConexionPrincipal => Globales.Configuracion.ConnectionString("Conexion");
+        public static string ConexionPrincipal => Globales.Configuracion.ConnectionString("ConexionDFQ");
         public static string ApiKey => Globales.Configuracion.Parameter("api-key").ToString();
         public static string RutaApp;
 

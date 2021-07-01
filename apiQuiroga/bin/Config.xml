@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Configuracion>
   <Parametros>
-    <!--aqui va la api key-->
-    <Parametro nombre="api-key" valor="Conexion" />
+    <Parametro nombre="api-key" valor="123" />
   </Parametros>
   <Conexiones>
     <CadenaConexion nombre="Conexion" valor="data source = quirogadelnoroeste.servehttp.com; initial catalog = QuirogaWeb_dev; user id = sa; password = 3lDorado" />
+    <CadenaConexion nombre="ConexionDFQ" valor="data source = quirogadelnoroeste.servehttp.com; initial catalog = DFQ; user id = sa; password = 3lDorado" />
   </Conexiones>
 </Configuracion>
