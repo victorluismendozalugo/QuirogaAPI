@@ -63,7 +63,7 @@ namespace apiQuiroga.Modules
             Post("/presentaciones/guardar", _ => PresentacionesGuardar());
 
             Post("/productos", _ => Productos());
-            //Get("/productos", _ => Productos());
+            Post("/productosDescripcion", _ => ProductosDescripcion());
 
             Post("/productos/scrolling", _ => ProductosScrolling());
             Post("/productos/guardar", _ => ProductosGuardar());
@@ -595,6 +595,41 @@ namespace apiQuiroga.Modules
                 ProductosModel p = this.Bind();
 
                 var r = _DACatalogos.Productos(p.ProductoID);
+
+                return Response.AsJson(new Result<DataModel>()
+                {
+                    Value = r.Value,
+                    Message = r.Message,
+                    Data = new DataModel()
+                    {
+                        CodigoError = r.Data.CodigoError,
+                        MensajeBitacora = r.Data.MensajeBitacora,
+                        Data = r.Data.Data
+                    }
+                });
+            }
+            catch (Exception ex)
+            {
+                return Response.AsJson(new Result<DataModel>()
+                {
+                    Value = false,
+                    Message = "Problemas en catalogo de productos",
+                    Data = new DataModel()
+                    {
+                        CodigoError = 101,
+                        MensajeBitacora = ex.Message,
+                        Data = ""
+                    }
+                });
+            }
+        }
+        private object ProductosDescripcion()
+        {
+            try
+            {
+                ProductosModel p = this.Bind();
+
+                var r = _DACatalogos.Productos(p.ProductoDesc);
 
                 return Response.AsJson(new Result<DataModel>()
                 {

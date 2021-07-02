@@ -64,7 +64,159 @@ namespace apiQuiroga.Modules
 
             Post("/recibo/guardar", _ => ReciboGuardar());
             Post("/recibo/detguardar", _ => ReciboDetGuardar());
+
+            ///genera-consulta y actualiza las ordenes de compra...
+            Post("/ordencompra", _ => OrdenCompraCon());
+            Post("/ordencompra/detalle", _ => OrdenCompraDetalleCon());
+            Post("/ordencompra/guardar", _ => OrdenCompraGuardar());
+            Post("/ordencompra/detalle/guardar", _ => OrdenCompraDetalleGuardar());
+            ///genera-consulta y actualiza las ordenes de compra...
         }
+
+        ///genera-consulta y actualiza las ordenes de compra...
+        private object OrdenCompraCon()
+        {
+            try
+            {
+                OrdenCompraModel p = this.Bind();
+
+                var r = _DAMovimientos.OrdenCompraCon(p.claveOrden, p.claveEmpresa, p.estatusOrden);
+
+                return Response.AsJson(new Result<DataModel>()
+                {
+                    Value = r.Value,
+                    Message = r.Message,
+                    Data = new DataModel()
+                    {
+                        CodigoError = r.Data.CodigoError,
+                        MensajeBitacora = r.Data.MensajeBitacora,
+                        Data = r.Data.Data
+                    }
+                });
+            }
+            catch (Exception ex)
+            {
+                return Response.AsJson(new Result<DataModel>()
+                {
+                    Value = false,
+                    Message = "Problemas al obtener el cabecero de la orden",
+                    Data = new DataModel()
+                    {
+                        CodigoError = 101,
+                        MensajeBitacora = ex.Message,
+                        Data = ""
+                    }
+                });
+            }
+        }
+        private object OrdenCompraDetalleCon()
+        {
+            try
+            {
+                OrdenCompraModel p = this.Bind();
+
+                var r = _DAMovimientos.OrdenCompraDetalleCon(p.claveOrden, p.claveEmpresa, p.estatusOrden);
+
+                return Response.AsJson(new Result<DataModel>()
+                {
+                    Value = r.Value,
+                    Message = r.Message,
+                    Data = new DataModel()
+                    {
+                        CodigoError = r.Data.CodigoError,
+                        MensajeBitacora = r.Data.MensajeBitacora,
+                        Data = r.Data.Data
+                    }
+                });
+            }
+            catch (Exception ex)
+            {
+                return Response.AsJson(new Result<DataModel>()
+                {
+                    Value = false,
+                    Message = "Problemas al obtener el detalle de la orden",
+                    Data = new DataModel()
+                    {
+                        CodigoError = 101,
+                        MensajeBitacora = ex.Message,
+                        Data = ""
+                    }
+                });
+            }
+        }
+        private object OrdenCompraGuardar()
+        {
+            try
+            {
+                //var t = this.BindToken();
+                OrdenCompraModel p = this.Bind();
+
+                var r = _DAMovimientos.OrdenCompraGuardar(p);
+
+                return Response.AsJson(new Result<DataModel>()
+                {
+                    Value = r.Value,
+                    Message = r.Message,
+                    Data = new DataModel()
+                    {
+                        CodigoError = r.Data.CodigoError,
+                        MensajeBitacora = r.Data.MensajeBitacora,
+                        CodigoMovimiento = r.Data.CodigoMovimiento,
+                        Data = r.Data.Data
+                    }
+                });
+            }
+            catch (Exception ex)
+            {
+                return Response.AsJson(new Result<DataModel>()
+                {
+                    Value = false,
+                    Message = "Problemas al guardar el movimiento",
+                    Data = new DataModel()
+                    {
+                        CodigoError = 101,
+                        MensajeBitacora = ex.Message,
+                        Data = ""
+                    }
+                });
+            }
+        }
+        private object OrdenCompraDetalleGuardar()
+        {
+            try
+            {
+                OrdenCompraModel p = this.Bind();
+
+                var r = _DAMovimientos.OrdenCompraDetalleGuardar(p);
+
+                return Response.AsJson(new Result<DataModel>()
+                {
+                    Value = r.Value,
+                    Message = r.Message,
+                    Data = new DataModel()
+                    {
+                        CodigoError = r.Data.CodigoError,
+                        MensajeBitacora = r.Data.MensajeBitacora,
+                        Data = r.Data.Data
+                    }
+                });
+            }
+            catch (Exception ex)
+            {
+                return Response.AsJson(new Result<DataModel>()
+                {
+                    Value = false,
+                    Message = "Problemas al guardar el detalle de la compra",
+                    Data = new DataModel()
+                    {
+                        CodigoError = 101,
+                        MensajeBitacora = ex.Message,
+                        Data = ""
+                    }
+                });
+            }
+        }
+        ///genera-consulta y actualiza las ordenes de compra...
 
         private object Compras()
         {
