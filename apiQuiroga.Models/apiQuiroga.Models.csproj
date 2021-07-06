@@ -72,9 +72,6 @@
     <Reference Include="WarmPack">
       <HintPath>..\apiParaiso\dll\WarmPack.dll</HintPath>
     </Reference>
-    <Reference Include="WarmPack.Core.Windows">
-      <HintPath>..\..\..\..\Downloads\WarmPack-master\src\WarmPack.Core.Windows\obj\Debug\WarmPack.Core.Windows.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppConfigurationX.cs" />

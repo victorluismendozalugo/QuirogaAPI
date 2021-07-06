@@ -48,6 +48,7 @@ namespace apiQuiroga.Modules
             Post("/familias/guardar", _ => FamiliasGuardar());
 
             Post("/formulas", _ => Formulas());
+            Post("/formulas/guardar", _ => FormulasGuardar());
 
             Post("/genericos", _ => Genericos());
 
@@ -91,7 +92,7 @@ namespace apiQuiroga.Modules
         }
 
         private object ProductosSAI()
-        {   
+        {
             try
             {
                 var r = _DACatalogosSAI.ProductosSAI();
@@ -305,6 +306,43 @@ namespace apiQuiroga.Modules
                 });
             }
         }
+
+        private object FormulasGuardar()
+        {
+            try
+            {
+                //var t = this.BindToken();
+                FormulasModel p = this.Bind();
+
+                var r = _DACatalogos.Formulas(p);
+
+                return Response.AsJson(new Result<DataModel>()
+                {
+                    Value = r.Value,
+                    Message = r.Message,
+                    Data = new DataModel()
+                    {
+                        CodigoError = r.Data.CodigoError,
+                        MensajeBitacora = r.Data.MensajeBitacora,
+                        Data = r.Data.Data
+                    }
+                });
+            }
+            catch (Exception ex)
+            {
+                return Response.AsJson(new Result<DataModel>()
+                {
+                    Value = false,
+                    Message = "Problemas al guardar formula",
+                    Data = new DataModel()
+                    {
+                        CodigoError = 101,
+                        MensajeBitacora = ex.Message,
+                        Data = ""
+                    }
+                });
+            }
+        }
         private object Genericos()
         {
             try
@@ -346,7 +384,7 @@ namespace apiQuiroga.Modules
             {
                 LaboratoriosModel p = this.Bind();
 
-                var r = _DACatalogos.Laboratorios(p.LaboratorioID);
+                var r = _DACatalogos.Laboratorios();
 
                 return Response.AsJson(new Result<DataModel>()
                 {
@@ -354,7 +392,7 @@ namespace apiQuiroga.Modules
                     Message = r.Message,
                     Data = new DataModel()
                     {
-                        CodigoError = r.Data.CodigoError,
+                        //CodigoError = r.Data.CodigoError,
                         MensajeBitacora = r.Data.MensajeBitacora,
                         Data = r.Data.Data
                     }

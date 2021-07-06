@@ -4,7 +4,7 @@
     <Parametro nombre="api-key" valor="123" />
   </Parametros>
   <Conexiones>
-    <CadenaConexion nombre="Conexion" valor="data source = quirogadelnoroeste.servehttp.com; initial catalog = QuirogaWeb_dev; user id = sa; password = 3lDorado" />
-    <CadenaConexion nombre="ConexionDFQ" valor="data source = quirogadelnoroeste.servehttp.com; initial catalog = DFQ; user id = sa; password = 3lDorado" />
+   <CadenaConexion nombre="ConexionDFQ" valor="§É¨Ï‡£â–µË™Ž¤Pä–¬Ú£ÕÈ”Ø±×¦ÝÌ£ç†qÛ™àÝ•Û•·ØbÑÖ®A¬ÖâÐ‘ßA¦É¨ÏÓŸÚA€ˆx´¸k“–¶Í¦ŽÐ”“^cÛ•©‡ Ô”¶ß£àËP°AvÔxÝÙ‘×" />
+   <CadenaConexion nombre="Conexion" valor="§É¨Ï‡£â–µË™Ž¤Pä–¬Ú£ÕÈ”Ø±×¦ÝÌ£ç†qÛ™àÝ•Û•·ØbÑÖ®A¬ÖâÐ‘ßA¦É¨ÏÓŸÚA€ˆ…ãÐ¢âˆ¤¿™ÐÆ”Ø—~ˆ©áÌ¢“Š§ˆqŽÚ‘®A³É§áÞŸå…c¥T¡Ótâ“¤Ì£" />
   </Conexiones>
 </Configuracion>

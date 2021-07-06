@@ -8,6 +8,6 @@
       public bool FormulaCombinada { get; set; }
       public string FormulaAccionTerapeutica { get; set; }
       public string FormulaProdLider { get; set; }
-      public short FormulaGenericoID { get; set; }
+      public int FormulaGenericoID { get; set; }
    }
 }
