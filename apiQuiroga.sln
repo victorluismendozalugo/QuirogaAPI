@@ -34,19 +34,4 @@ Global
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {604F32AF-430B-42A6-BD78-CF8D4BDE4D05}
 	EndGlobalSection
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 4
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://dev.azure.com/kragsolutions
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = apiQuiroga\\apiQuiroga.csproj
-		SccProjectName1 = apiQuiroga
-		SccLocalPath1 = apiQuiroga
-		SccProjectUniqueName2 = apiQuiroga.DA\\apiQuiroga.DA.csproj
-		SccProjectName2 = apiQuiroga.DA
-		SccLocalPath2 = apiQuiroga.DA
-		SccProjectUniqueName3 = apiQuiroga.Models\\apiQuiroga.Models.csproj
-		SccProjectName3 = apiQuiroga.Models
-		SccLocalPath3 = apiQuiroga.Models
-	EndGlobalSection
 EndGlobal

@@ -105,10 +105,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="dll\config.xml" />
     <Content Include="packages.config" />
-    <None Include="Properties\PublishProfiles\apiQuiroga.pubxml" />
-    <None Include="Properties\PublishProfiles\Quiroga.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -143,6 +140,9 @@
       <Project>{cf0bfd64-9941-47d0-ae9c-08299371d800}</Project>
       <Name>apiQuiroga.Models</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\PublishProfiles\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

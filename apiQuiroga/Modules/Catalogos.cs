@@ -56,6 +56,7 @@ namespace apiQuiroga.Modules
             Post("/laboratorios/guardar", _ => LaboratoriosGuardar());
 
             Post("/lineas", _ => Lineas());
+            Post("/lineas/guardar", _ => LineasGuardar());
 
             Post("/medidas", _ => Medidas());
             Post("/medidas/guardar", _ => MedidasGuardar());
@@ -475,6 +476,42 @@ namespace apiQuiroga.Modules
                 {
                     Value = false,
                     Message = "Problemas en catalogo de lineas",
+                    Data = new DataModel()
+                    {
+                        CodigoError = 101,
+                        MensajeBitacora = ex.Message,
+                        Data = ""
+                    }
+                });
+            }
+        }
+
+        private object LineasGuardar()
+        {
+            try
+            {
+                LineasModel p = this.Bind();
+
+                var r = _DACatalogos.Lineas(p);
+
+                return Response.AsJson(new Result<DataModel>()
+                {
+                    Value = r.Value,
+                    Message = r.Message,
+                    Data = new DataModel()
+                    {
+                        CodigoError = r.Data.CodigoError,
+                        MensajeBitacora = r.Data.MensajeBitacora,
+                        Data = r.Data.Data
+                    }
+                });
+            }
+            catch (Exception ex)
+            {
+                return Response.AsJson(new Result<DataModel>()
+                {
+                    Value = false,
+                    Message = "Problemas al guardar linea",
                     Data = new DataModel()
                     {
                         CodigoError = 101,
