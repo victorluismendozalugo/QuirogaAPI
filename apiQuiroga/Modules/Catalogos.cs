@@ -307,7 +307,6 @@ namespace apiQuiroga.Modules
                 });
             }
         }
-
         private object FormulasGuardar()
         {
             try
@@ -485,7 +484,6 @@ namespace apiQuiroga.Modules
                 });
             }
         }
-
         private object LineasGuardar()
         {
             try
