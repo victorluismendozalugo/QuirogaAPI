@@ -29,9 +29,10 @@ namespace apiQuiroga.Models
         //public static string ConexionPrincipal => Globales.Configuracion.ConnectionString("admision", false, true, "data source = negrito.uasnet.mx; initial catalog = SIIA_CE; user id = alejandro; password = triplea");
         //public static string ApiKey => Globales.Configuracion.Parameter("ApiKey", true, "x-api-key").ToString();
 
-        //valor true para que desencripte la cadena de conexino
+        //valor true para que desencripte la cadena de conexion
         //poner false o quitar el segundo parametro si la cadena no está encriptada
-        public static string ConexionPrincipal => Globales.Configuracion.ConnectionString("Conexion", true);
+        public static string ConexionPrincipal => Globales.Configuracion.ConnectionString("ConexionDFQ", true);
+        public static string ConexionSecundaria => Globales.Configuracion.ConnectionString("Conexion", true);
         public static string ApiKey => Globales.Configuracion.Parameter("api-key").ToString();
         public static string RutaApp;
 

@@ -9,10 +9,12 @@ namespace apiQuiroga.DA
     public class DAUsuario
     {
         private readonly Conexion _conexion = null;
+        private readonly Conexion _conexion2 = null;
 
         public DAUsuario()
         {
             _conexion = new Conexion(ConexionType.MSSQLServer, Globales.ConexionPrincipal);
+            _conexion2 = new Conexion(ConexionType.MSSQLServer, Globales.ConexionSecundaria);
         }
 
         public Result<DataModel> Login(UsuarioCredencialesModel credenciales)
@@ -71,7 +73,7 @@ namespace apiQuiroga.DA
                 parametros.Add("@pMsg", ConexionDbType.VarChar, 300, System.Data.ParameterDirection.Output, 300);
                 parametros.Add("@pCodError", ConexionDbType.Int, System.Data.ParameterDirection.Output);
 
-                var r = _conexion.ExecuteWithResults<UsuarioMenuModel>("QW_procMenuUsuarioCon", parametros);
+                var r = _conexion2.ExecuteWithResults<UsuarioMenuModel>("QW_procMenuUsuarioCon", parametros);
 
                 return new Result<DataModel>()
                 {
