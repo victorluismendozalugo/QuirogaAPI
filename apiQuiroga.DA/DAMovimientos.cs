@@ -16,10 +16,12 @@ namespace apiQuiroga.DA
     public class DAMovimientos
     {
         private readonly Conexion _conexion = null;
+        private readonly Conexion _conexion2 = null;
 
         public DAMovimientos()
         {
             _conexion = new Conexion(ConexionType.MSSQLServer, Globales.ConexionPrincipal);
+            _conexion2 = new Conexion(ConexionType.MSSQLServer, Globales.ConexionSecundaria);
         }
 
 
@@ -36,7 +38,7 @@ namespace apiQuiroga.DA
                 parametros.Add("@pMsg", ConexionDbType.VarChar, 300, System.Data.ParameterDirection.Output, 300);
                 parametros.Add("@pCodError", ConexionDbType.Int, System.Data.ParameterDirection.Output);
 
-                var r = _conexion.ExecuteWithResults<OrdenCompraModel>("QW_procOrdenCompraCon", parametros);
+                var r = _conexion2.ExecuteWithResults<OrdenCompraModel>("QW_procOrdenCompraCon", parametros);
 
                 return new Result<DataModel>()
                 {
@@ -78,7 +80,7 @@ namespace apiQuiroga.DA
                 parametros.Add("@pMsg", ConexionDbType.VarChar, 300, System.Data.ParameterDirection.Output, 300);
                 parametros.Add("@pCodError", ConexionDbType.Int, System.Data.ParameterDirection.Output);
 
-                var r = _conexion.ExecuteWithResults<OrdenCompraModel>("QW_procOrdenCompraDetalleCon", parametros);
+                var r = _conexion2.ExecuteWithResults<OrdenDetalleModel>("QW_procOrdenCompraDetalleCon", parametros);
 
                 return new Result<DataModel>()
                 {
@@ -119,9 +121,8 @@ namespace apiQuiroga.DA
                 parametros.Add("@pResultado", ConexionDbType.Bit, System.Data.ParameterDirection.Output);
                 parametros.Add("@pMsg", ConexionDbType.VarChar, 300, System.Data.ParameterDirection.Output, 300);
                 parametros.Add("@pCodError", ConexionDbType.Int, System.Data.ParameterDirection.Output);
-                parametros.Add("@pMovimiento", ConexionDbType.Int, System.Data.ParameterDirection.Output);
 
-                var r = _conexion.Execute("QW_procOrdenCompraGuardar", parametros);
+                var r = _conexion2.Execute("QW_procOrdenCompraGuardar", parametros);
 
                 return new Result<DataModel>()
                 {
@@ -131,7 +132,6 @@ namespace apiQuiroga.DA
                     {
                         CodigoError = parametros.Value("@pCodError").ToInt32(),
                         MensajeBitacora = parametros.Value("@pMsg").ToString(),
-                        CodigoMovimiento = parametros.Value("@pMovimiento").ToInt32(),
                         Data = r.Data
                     }
                 };
