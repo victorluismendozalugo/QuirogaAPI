@@ -69,6 +69,7 @@ namespace apiQuiroga.Modules
             Post("/ordencompra", _ => OrdenCompraCon());
             Post("/ordencompra/detalle", _ => OrdenCompraDetalleCon());
             Post("/ordencompra/guardar", _ => OrdenCompraGuardar());
+            Post("/ordencompra/autorizar", _ => OrdenCompraAutorizar());
             //Post("/ordencompra/detalle/guardar", _ => OrdenCompraDetalleGuardar());
             //genera-consulta y actualiza las ordenes de compra...
         }
@@ -177,13 +178,13 @@ namespace apiQuiroga.Modules
                 });
             }
         }
-        private object OrdenCompraDetalleGuardar()
+        private object OrdenCompraAutorizar()
         {
             try
             {
                 OrdenCompraModel p = this.Bind();
 
-                var r = _DAMovimientos.OrdenCompraDetalleGuardar(p);
+                var r = _DAMovimientos.OrdenCompraAutorizar(p.claveOrden, p.claveEmpresa, p.estatusOrden);
 
                 return Response.AsJson(new Result<DataModel>()
                 {
@@ -202,7 +203,7 @@ namespace apiQuiroga.Modules
                 return Response.AsJson(new Result<DataModel>()
                 {
                     Value = false,
-                    Message = "Problemas al guardar el detalle de la compra",
+                    Message = "Problemas al autorizar la orden",
                     Data = new DataModel()
                     {
                         CodigoError = 101,

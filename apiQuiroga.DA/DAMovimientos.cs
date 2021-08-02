@@ -151,20 +151,20 @@ namespace apiQuiroga.DA
                 };
             }
         }
-       
-        //guarda el detalle de las Ordenes de compra
-        public Result<DataModel> OrdenCompraDetalleGuardar(OrdenCompraModel ordenCompra)
+
+        public Result<DataModel> OrdenCompraAutorizar(int claveOrden, int claveEmpresa, string estatus)
         {
             var parametros = new ConexionParameters();
-            var xml = ordenCompra.ToXml("root");
             try
             {
-                parametros.Add("@pDatosXML", ConexionDbType.Xml, xml);
+                parametros.Add("@pClaveEmpresa", ConexionDbType.Int, claveEmpresa);
+                parametros.Add("@pClaveOrden", ConexionDbType.Int, claveOrden);
+                parametros.Add("@pEstatus", ConexionDbType.VarChar, estatus);
                 parametros.Add("@pResultado", ConexionDbType.Bit, System.Data.ParameterDirection.Output);
                 parametros.Add("@pMsg", ConexionDbType.VarChar, 300, System.Data.ParameterDirection.Output, 300);
                 parametros.Add("@pCodError", ConexionDbType.Int, System.Data.ParameterDirection.Output);
 
-                var r = _conexion.Execute("QW_procOrdenCompraDetGuardar", parametros);
+                var r = _conexion2.ExecuteWithResults<OrdenDetalleModel>("QW_procOrdenCompraAutorizar", parametros);
 
                 return new Result<DataModel>()
                 {
@@ -183,7 +183,7 @@ namespace apiQuiroga.DA
                 return new Result<DataModel>()
                 {
                     Value = false,
-                    Message = "Problemas al guardar detalle de orden de compra",
+                    Message = "Problemas al autorizar la orden",
                     Data = new DataModel()
                     {
                         CodigoError = 101,
@@ -193,9 +193,6 @@ namespace apiQuiroga.DA
                 };
             }
         }
-
-
-
 
         public Result<DataModel> Compras(int clavePedido, string estatus)
         {
