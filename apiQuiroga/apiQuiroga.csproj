@@ -129,6 +129,7 @@
     <Compile Include="DynamicModelBinder.cs" />
     <Compile Include="Modules\AuthModule.cs" />
     <Compile Include="Modules\Catalogos.cs" />
+    <Compile Include="Modules\Configuracion.cs" />
     <Compile Include="Modules\Movimientos.cs" />
     <Compile Include="Modules\Reportes.cs" />
     <Compile Include="Modules\RootModule.cs" />
