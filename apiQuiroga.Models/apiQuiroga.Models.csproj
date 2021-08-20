@@ -93,6 +93,8 @@
     <Compile Include="Catalogos\ProductosSAIModel.cs" />
     <Compile Include="Catalogos\ProductosTempModel.cs" />
     <Compile Include="Catalogos\ProveedoresModel.cs" />
+    <Compile Include="Configuracion\MenuModel.cs" />
+    <Compile Include="Configuracion\PerfilesUsuarioModel.cs" />
     <Compile Include="DataModel.cs" />
     <Compile Include="Globales.cs" />
     <Compile Include="Movimientos\BitacoraRecepcionModel.cs" />

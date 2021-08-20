@@ -43,19 +43,18 @@ namespace apiQuiroga.Modules
 
             _DAReportes = new DAReportes();
 
-            Post("/familias/catalogo", _ => FamiliasCat());
-            Post("/movimientos/ordenCompra", _ => OrdenCompra());
+            Post("/ordencompra", _ => RptOrdenCompra());
 
         }
 
-        private object OrdenCompra()
+        private object RptOrdenCompra()
         {
             String b64Str;
             try
             {
-                ComprasModel p = this.Bind();
+                OrdenCompraModel p = this.Bind();
 
-                var r = _DAReportes.OrdenCompra(p.clavePedido);
+                var r = _DAReportes.RptOrdenCompra(p.claveOrden, p.claveEmpresa);
 
                 if (r.Value == false)
                 {
@@ -114,70 +113,70 @@ namespace apiQuiroga.Modules
                 });
             }
         }
-        private object FamiliasCat()
-        {
-            String b64Str;
-            try
-            {
-                FamiliasModel p = this.Bind();
+        //private object FamiliasCat()
+        //{
+        //    String b64Str;
+        //    try
+        //    {
+        //        FamiliasModel p = this.Bind();
 
-                var r = _DAReportes.FamiliasCat();
+        //        var r = _DAReportes.FamiliasCat();
 
-                if (r.Value == false)
-                {
-                    return Response.AsJson(new Result<DataModel>()
-                    {
-                        Value = r.Value,
-                        Message = r.Message,
-                        Data = new DataModel()
-                        {
-                            CodigoError = r.Data.CodigoError,
-                            MensajeBitacora = r.Data.MensajeBitacora,
-                            Data = ""
-                        }
-                    });
-                }
+        //        if (r.Value == false)
+        //        {
+        //            return Response.AsJson(new Result<DataModel>()
+        //            {
+        //                Value = r.Value,
+        //                Message = r.Message,
+        //                Data = new DataModel()
+        //                {
+        //                    CodigoError = r.Data.CodigoError,
+        //                    MensajeBitacora = r.Data.MensajeBitacora,
+        //                    Data = ""
+        //                }
+        //            });
+        //        }
 
-                DataSet ds = (DataSet)r.Data.Data;
+        //        DataSet ds = (DataSet)r.Data.Data;
 
-                ReportDocument cryRpt = new ReportDocument();
-                cryRpt.Load(Globales.RutaApp + "Reportes\\Catalogos\\repCatFamilias.rpt");
-                cryRpt.Database.Tables["Detalle"].SetDataSource(ds.Tables[0]);
+        //        ReportDocument cryRpt = new ReportDocument();
+        //        cryRpt.Load(Globales.RutaApp + "Reportes\\Catalogos\\repCatFamilias.rpt");
+        //        cryRpt.Database.Tables["Detalle"].SetDataSource(ds.Tables[0]);
 
-                using (Stream stm = cryRpt.ExportToStream(CrystalDecisions.Shared.ExportFormatType.PortableDocFormat))
-                {
-                    stm.Seek(0, SeekOrigin.Begin);
-                    byte[] buffer = new byte[stm.Length];
-                    stm.Read(buffer, 0, (int)stm.Length);
-                    b64Str = Convert.ToBase64String(buffer);
-                }
+        //        using (Stream stm = cryRpt.ExportToStream(CrystalDecisions.Shared.ExportFormatType.PortableDocFormat))
+        //        {
+        //            stm.Seek(0, SeekOrigin.Begin);
+        //            byte[] buffer = new byte[stm.Length];
+        //            stm.Read(buffer, 0, (int)stm.Length);
+        //            b64Str = Convert.ToBase64String(buffer);
+        //        }
 
-                return Response.AsJson(new Result<DataModel>()
-                {
-                    Value = true,
-                    Message = "Reporte de familias",
-                    Data = new DataModel()
-                    {
-                        CodigoError = 0,
-                        MensajeBitacora = "",
-                        Data = b64Str
-                    }
-                });
-            }
-            catch (Exception ex)
-            {
-                return Response.AsJson(new Result<DataModel>()
-                {
-                    Value = false,
-                    Message = "Problemas en reporte de familias",
-                    Data = new DataModel()
-                    {
-                        CodigoError = 101,
-                        MensajeBitacora = ex.Message,
-                        Data = ""
-                    }
-                });
-            }
-        }
+        //        return Response.AsJson(new Result<DataModel>()
+        //        {
+        //            Value = true,
+        //            Message = "Reporte de familias",
+        //            Data = new DataModel()
+        //            {
+        //                CodigoError = 0,
+        //                MensajeBitacora = "",
+        //                Data = b64Str
+        //            }
+        //        });
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return Response.AsJson(new Result<DataModel>()
+        //        {
+        //            Value = false,
+        //            Message = "Problemas en reporte de familias",
+        //            Data = new DataModel()
+        //            {
+        //                CodigoError = 101,
+        //                MensajeBitacora = ex.Message,
+        //                Data = ""
+        //            }
+        //        });
+        //    }
+        //}
     }
 }
