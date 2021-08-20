@@ -11,10 +11,12 @@ namespace apiQuiroga.DA
     public class DACatalogos
     {
         private readonly Conexion _conexion = null;
+        private readonly Conexion _conexion2 = null;
 
         public DACatalogos()
         {
             _conexion = new Conexion(ConexionType.MSSQLServer, Globales.ConexionPrincipal);
+            _conexion2 = new Conexion(ConexionType.MSSQLServer, Globales.ConexionSecundaria);
         }
 
         public Result<DataModel> Proveedores(int idProveedor, string tipoProveedor)
@@ -1189,7 +1191,7 @@ namespace apiQuiroga.DA
                 parametros.Add("@pMsg", ConexionDbType.VarChar, 300, System.Data.ParameterDirection.Output, 300);
                 parametros.Add("@pCodError", ConexionDbType.Int, System.Data.ParameterDirection.Output);
 
-                var r = _conexion.ExecuteWithResults<PaqueteriasModel>("QW_procPaqueteriasCon", parametros);
+                var r = _conexion2.ExecuteWithResults<PaqueteriasModel>("QW_procPaqueteriasCon", parametros);
 
                 return new Result<DataModel>()
                 {
@@ -1269,7 +1271,7 @@ namespace apiQuiroga.DA
                 parametros.Add("@pMsg", ConexionDbType.VarChar, 300, System.Data.ParameterDirection.Output, 300);
                 parametros.Add("@pCodError", ConexionDbType.Int, System.Data.ParameterDirection.Output);
 
-                var r = _conexion.ExecuteWithResults<AgentesModel>("QW_procAgentesCon", parametros);
+                var r = _conexion2.ExecuteWithResults<AgentesModel>("QW_procAgentesCon", parametros);
 
                 return new Result<DataModel>()
                 {
@@ -1309,7 +1311,7 @@ namespace apiQuiroga.DA
                 parametros.Add("@pMsg", ConexionDbType.VarChar, 300, System.Data.ParameterDirection.Output, 300);
                 parametros.Add("@pCodError", ConexionDbType.Int, System.Data.ParameterDirection.Output);
 
-                var r = _conexion.ExecuteWithResults<ClientesModel>("QW_procClientesCon", parametros);
+                var r = _conexion2.ExecuteWithResults<ClientesModel>("QW_procClientesCon", parametros);
 
                 return new Result<DataModel>()
                 {
@@ -1329,6 +1331,83 @@ namespace apiQuiroga.DA
                 {
                     Value = false,
                     Message = "Problemas en catalogo de cliente",
+                    Data = new DataModel()
+                    {
+                        CodigoError = 101,
+                        MensajeBitacora = ex.Message,
+                        Data = ""
+                    }
+                };
+            }
+        }
+
+        public Result<DataModel> ClientesFiltros(string Filtro)
+        {
+            var parametros = new ConexionParameters();
+            try
+            {
+                parametros.Add("@CodigoUsuario", ConexionDbType.VarChar, Filtro);
+                parametros.Add("@pResultado", ConexionDbType.Bit, System.Data.ParameterDirection.Output);
+                parametros.Add("@pMsg", ConexionDbType.VarChar, 300, System.Data.ParameterDirection.Output, 300);
+                parametros.Add("@pCodError", ConexionDbType.Int, System.Data.ParameterDirection.Output);
+
+                var r = _conexion2.ExecuteWithResults<ClientesModel>("QW_P_ObtenCliente", parametros);
+
+                return new Result<DataModel>()
+                {
+                    Value = parametros.Value("@pResultado").ToBoolean(),
+                    Message = parametros.Value("@pMsg").ToString(),
+                    Data = new DataModel()
+                    {
+                        CodigoError = parametros.Value("@pCodError").ToInt32(),
+                        MensajeBitacora = parametros.Value("@pMsg").ToString(),
+                        Data = r.Data
+                    }
+                };
+            }
+            catch (Exception ex)
+            {
+                return new Result<DataModel>()
+                {
+                    Value = false,
+                    Message = "Problemas en catalogo de cliente",
+                    Data = new DataModel()
+                    {
+                        CodigoError = 101,
+                        MensajeBitacora = ex.Message,
+                        Data = ""
+                    }
+                };
+            }
+        }
+
+        public Result<DataModel> ObtenEmpresas(int IDEmpresa)
+        {
+            var parametros = new ConexionParameters();
+            try
+            {
+                parametros.Add("@Clave_Empresa", ConexionDbType.Int, IDEmpresa);                
+
+                var r = _conexion2.ExecuteWithResults<EmpresasModel>("QW_P_CA_Consulta_Empresas", parametros);
+
+                return new Result<DataModel>()
+                {
+                    Value = true,
+                    Message = "",
+                    Data = new DataModel()
+                    {
+                        CodigoError = 0,
+                        MensajeBitacora = "",
+                        Data = r.Data
+                    }
+                };
+            }
+            catch (Exception ex)
+            {
+                return new Result<DataModel>()
+                {
+                    Value = false,
+                    Message = "Problemas en catalogo de empresas",
                     Data = new DataModel()
                     {
                         CodigoError = 101,

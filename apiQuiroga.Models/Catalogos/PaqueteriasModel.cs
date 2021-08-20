@@ -8,7 +8,7 @@ namespace apiQuiroga.Models.Catalogos
 {
     public class PaqueteriasModel
     {
-        public int PaqueteriaID { get; set; }
-        public string PaqueteriaNombre { get; set; }
+        public int paqueteriaID { get; set; }
+        public string paqueteriaNombre { get; set; }
     }
 }
