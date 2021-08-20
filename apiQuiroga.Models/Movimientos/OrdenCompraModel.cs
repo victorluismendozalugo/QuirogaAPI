@@ -23,6 +23,7 @@ namespace apiQuiroga.Models.Movimientos
         public int usuarioRegistro { get; set; }
         public string fechaRegistro { get; set; }
         public string provRazonSocial { get; set; }
+        public int cantidadProductos { get; set; }
         public List<OrdenDetalleModel> ordenDetalle { get; set; }
     }
 
