@@ -69,9 +69,17 @@ namespace apiQuiroga.Modules
             Post("/ordencompra", _ => OrdenCompraCon());
             Post("/ordencompra/detalle", _ => OrdenCompraDetalleCon());
             Post("/ordencompra/guardar", _ => OrdenCompraGuardar());
+<<<<<<< HEAD
             Post("/ordencompra/autorizar", _ => OrdenCompraAutorizar());
             //Post("/ordencompra/detalle/guardar", _ => OrdenCompraDetalleGuardar());
             //genera-consulta y actualiza las ordenes de compra...
+=======
+            Post("/ordencompra/detalle/guardar", _ => OrdenCompraDetalleGuardar());
+            ///genera-consulta y actualiza las ordenes de compra...
+            ///
+            Post("/ventas/pedidocon", _ => PedidoCon());
+            Post("/ventas/pedidodetalle", _ => PedidoDetalleCon());
+>>>>>>> 5f99ad6d2cf2ea9e8a08b0da4b9c508d4dbe537f
         }
 
         ///genera-consulta y actualiza las ordenes de compra...
@@ -746,6 +754,78 @@ namespace apiQuiroga.Modules
                 {
                     Value = false,
                     Message = ex.Message, // "Problemas al guardar ...",
+                    Data = new DataModel()
+                    {
+                        CodigoError = 101,
+                        MensajeBitacora = ex.Message,
+                        Data = ""
+                    }
+                });
+            }
+        }
+
+        private object PedidoCon()
+        {
+            try
+            {
+                PedidoModel p = this.Bind();
+
+                var r = _DAMovimientos.PedidoCon(p.IDEmpresa, p.IDPedidoEnc);
+
+                return Response.AsJson(new Result<DataModel>()
+                {
+                    Value = r.Value,
+                    Message = r.Message,
+                    Data = new DataModel()
+                    {
+                        CodigoError = r.Data.CodigoError,
+                        MensajeBitacora = r.Data.MensajeBitacora,
+                        Data = r.Data.Data
+                    }
+                });
+            }
+            catch (Exception ex)
+            {
+                return Response.AsJson(new Result<DataModel>()
+                {
+                    Value = false,
+                    Message = "Problemas al obtener pedido",
+                    Data = new DataModel()
+                    {
+                        CodigoError = 101,
+                        MensajeBitacora = ex.Message,
+                        Data = ""
+                    }
+                });
+            }
+        }
+
+        private object PedidoDetalleCon()
+        {
+            try
+            {
+                PedidoDetalleModel p = this.Bind();
+
+                var r = _DAMovimientos.PedidoDetalleCon(p.IDEmpresa, p.IDPedidoEnc );
+
+                return Response.AsJson(new Result<DataModel>()
+                {
+                    Value = r.Value,
+                    Message = r.Message,
+                    Data = new DataModel()
+                    {
+                        CodigoError = r.Data.CodigoError,
+                        MensajeBitacora = r.Data.MensajeBitacora,
+                        Data = r.Data.Data
+                    }
+                });
+            }
+            catch (Exception ex)
+            {
+                return Response.AsJson(new Result<DataModel>()
+                {
+                    Value = false,
+                    Message = "Problemas al obtener detalle pedido",
                     Data = new DataModel()
                     {
                         CodigoError = 101,
