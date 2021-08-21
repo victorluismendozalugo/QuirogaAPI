@@ -65,6 +65,7 @@
   <ItemGroup>
     <Compile Include="DACatalogos.cs" />
     <Compile Include="DAConfiguracion.cs" />
+    <Compile Include="DAClientes.cs" />
     <Compile Include="DAMovimientos.cs" />
     <Compile Include="DAProductosSAI.cs" />
     <Compile Include="DAReportes.cs" />

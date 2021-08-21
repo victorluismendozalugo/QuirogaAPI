@@ -1,6 +1,3 @@
-C:\Quiroga\QuirogaAPI\apiQuiroga.DA\obj\Debug\apiQuiroga.DA.Properties.Resources.resources
-C:\Quiroga\QuirogaAPI\apiQuiroga.DA\obj\Debug\apiQuiroga.DA.csproj.GenerateResource.cache
-C:\Quiroga\QuirogaAPI\apiQuiroga.DA\obj\Debug\apiQuiroga.DA.csproj.CoreCompileInputs.cache
 C:\Quiroga\QuirogaAPI\apiQuiroga.DA\bin\Debug\apiQuiroga.DA.dll.config
 C:\Quiroga\QuirogaAPI\apiQuiroga.DA\bin\Debug\apiQuiroga.DA.dll
 C:\Quiroga\QuirogaAPI\apiQuiroga.DA\bin\Debug\apiQuiroga.DA.pdb
@@ -18,6 +15,9 @@ C:\Quiroga\QuirogaAPI\apiQuiroga.DA\bin\Debug\System.IdentityModel.Tokens.Jwt.xm
 C:\Quiroga\QuirogaAPI\apiQuiroga.DA\bin\Debug\Microsoft.IdentityModel.Logging.xml
 C:\Quiroga\QuirogaAPI\apiQuiroga.DA\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
 C:\Quiroga\QuirogaAPI\apiQuiroga.DA\obj\Debug\apiQuiroga.DA.csprojAssemblyReference.cache
+C:\Quiroga\QuirogaAPI\apiQuiroga.DA\obj\Debug\apiQuiroga.DA.Properties.Resources.resources
+C:\Quiroga\QuirogaAPI\apiQuiroga.DA\obj\Debug\apiQuiroga.DA.csproj.GenerateResource.cache
+C:\Quiroga\QuirogaAPI\apiQuiroga.DA\obj\Debug\apiQuiroga.DA.csproj.CoreCompileInputs.cache
 C:\Quiroga\QuirogaAPI\apiQuiroga.DA\obj\Debug\apiQuiroga.DA.csproj.CopyComplete
 C:\Quiroga\QuirogaAPI\apiQuiroga.DA\obj\Debug\apiQuiroga.DA.dll
 C:\Quiroga\QuirogaAPI\apiQuiroga.DA\obj\Debug\apiQuiroga.DA.pdb

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace apiQuiroga.Models.Catalogos
+﻿namespace apiQuiroga.Models.Catalogos
 {
     public class ClientesModel
     {
@@ -26,5 +20,14 @@ namespace apiQuiroga.Models.Catalogos
         public string ClienteTipoPersona { get; set; }
         public string ClienteResponsableFiscal { get; set; }
         public string ClienteEmailResponsable { get; set; }
+        public int ClientePlazo { get; set; }
+        public int ClienteCveEstado { get; set; }
+        public string ClienteEstadoDesc { get; set; }
+        public int ClienteCveMunicipio { get; set; }
+        public string ClienteMunicipioDesc { get; set; }     
+        public decimal ClienteSaldo { get; set; }
+        public string ClienteEstatus { get; set; }
+
+
     }
 }

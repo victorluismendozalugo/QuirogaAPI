@@ -140,6 +140,7 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>OrdenCompra.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -157,7 +158,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\apiQuiroga.DA\apiQuiroga.DA.csproj">
-      <Project>{f9c66a5f-9fae-4b6e-b639-d86158060983}</Project>
+      <Project>{F9C66A5F-9FAE-4B6E-B639-D86158060983}</Project>
       <Name>apiQuiroga.DA</Name>
     </ProjectReference>
     <ProjectReference Include="..\apiQuiroga.Models\apiQuiroga.Models.csproj">

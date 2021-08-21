@@ -14,6 +14,7 @@ namespace apiQuiroga.Modules
     {
         private readonly DACatalogos _DACatalogos = null;
         private readonly DAProductosSAI _DACatalogosSAI = null;
+        
 
         public Catalogos() : base("/catalogo")
         {
@@ -80,8 +81,10 @@ namespace apiQuiroga.Modules
             Post("/empleados/guardar", _ => EmpleadosGuardar());
 
             Post("/clientes", _ => Clientes());
+            Post("/clientesFiltro", _ => ClientesFiltro());
 
             Post("/agentes", _ => Agentes());
+            Post("/empresas", _ => Empresas());
 
             Post("/medicos", _ => Medicos());
             Post("/medicos/guardar", _ => MedicosGuardar());
@@ -1164,7 +1167,7 @@ namespace apiQuiroga.Modules
             {
                 PaqueteriasModel p = this.Bind();
 
-                var r = _DACatalogos.Paqueterias(p.PaqueteriaID);
+                var r = _DACatalogos.Paqueterias(p.paqueteriaID);
 
                 return Response.AsJson(new Result<DataModel>()
                 {
@@ -1236,6 +1239,78 @@ namespace apiQuiroga.Modules
                 ClientesModel p = this.Bind();
 
                 var r = _DACatalogos.Clientes(p.ClienteID);
+
+                return Response.AsJson(new Result<DataModel>()
+                {
+                    Value = r.Value,
+                    Message = r.Message,
+                    Data = new DataModel()
+                    {
+                        CodigoError = r.Data.CodigoError,
+                        MensajeBitacora = r.Data.MensajeBitacora,
+                        Data = r.Data.Data
+                    }
+                });
+            }
+            catch (Exception ex)
+            {
+                return Response.AsJson(new Result<DataModel>()
+                {
+                    Value = false,
+                    Message = "Problemas en catalogo de clientes",
+                    Data = new DataModel()
+                    {
+                        CodigoError = 101,
+                        MensajeBitacora = ex.Message,
+                        Data = ""
+                    }
+                });
+            }
+        }
+
+        private object ClientesFiltro()
+        {
+            try
+            {
+                ClientesModel p = this.Bind();
+
+                var r = _DACatalogos.ClientesFiltros(p.ClienteRazonSocial);
+
+                return Response.AsJson(new Result<DataModel>()
+                {
+                    Value = r.Value,
+                    Message = r.Message,
+                    Data = new DataModel()
+                    {
+                        CodigoError = r.Data.CodigoError,
+                        MensajeBitacora = r.Data.MensajeBitacora,
+                        Data = r.Data.Data
+                    }
+                });
+            }
+            catch (Exception ex)
+            {
+                return Response.AsJson(new Result<DataModel>()
+                {
+                    Value = false,
+                    Message = "Problemas en catalogo de clientes",
+                    Data = new DataModel()
+                    {
+                        CodigoError = 101,
+                        MensajeBitacora = ex.Message,
+                        Data = ""
+                    }
+                });
+            }
+        }
+
+        private object Empresas()
+        {
+            try
+            {
+                EmpresasModel p = this.Bind();
+
+                var r = _DACatalogos.ObtenEmpresas(p.clave_empresa);
 
                 return Response.AsJson(new Result<DataModel>()
                 {
