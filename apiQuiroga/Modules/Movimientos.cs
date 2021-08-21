@@ -69,17 +69,14 @@ namespace apiQuiroga.Modules
             Post("/ordencompra", _ => OrdenCompraCon());
             Post("/ordencompra/detalle", _ => OrdenCompraDetalleCon());
             Post("/ordencompra/guardar", _ => OrdenCompraGuardar());
-<<<<<<< HEAD
             Post("/ordencompra/autorizar", _ => OrdenCompraAutorizar());
             //Post("/ordencompra/detalle/guardar", _ => OrdenCompraDetalleGuardar());
             //genera-consulta y actualiza las ordenes de compra...
-=======
-            Post("/ordencompra/detalle/guardar", _ => OrdenCompraDetalleGuardar());
+            //Post("/ordencompra/detalle/guardar", _ => OrdenCompraDetalleGuardar());
             ///genera-consulta y actualiza las ordenes de compra...
             ///
             Post("/ventas/pedidocon", _ => PedidoCon());
             Post("/ventas/pedidodetalle", _ => PedidoDetalleCon());
->>>>>>> 5f99ad6d2cf2ea9e8a08b0da4b9c508d4dbe537f
         }
 
         ///genera-consulta y actualiza las ordenes de compra...

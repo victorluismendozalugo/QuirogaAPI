@@ -17,10 +17,6 @@ namespace apiQuiroga.DA
     {
         private readonly Conexion _conexion = null;
         private readonly Conexion _conexion2 = null;
-<<<<<<< HEAD
-=======
-
->>>>>>> 5f99ad6d2cf2ea9e8a08b0da4b9c508d4dbe537f
 
         public DAMovimientos()
         {

@@ -64,11 +64,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DACatalogos.cs" />
-<<<<<<< HEAD
     <Compile Include="DAConfiguracion.cs" />
-=======
     <Compile Include="DAClientes.cs" />
->>>>>>> 5f99ad6d2cf2ea9e8a08b0da4b9c508d4dbe537f
     <Compile Include="DAMovimientos.cs" />
     <Compile Include="DAProductosSAI.cs" />
     <Compile Include="DAReportes.cs" />
