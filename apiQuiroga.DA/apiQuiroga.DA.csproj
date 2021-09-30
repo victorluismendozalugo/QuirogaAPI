@@ -68,6 +68,7 @@
     <Compile Include="DAClientes.cs" />
     <Compile Include="DAMovimientos.cs" />
     <Compile Include="DAProductosSAI.cs" />
+    <Compile Include="DAReciboMercancia.cs" />
     <Compile Include="DAReportes.cs" />
     <Compile Include="DAUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
