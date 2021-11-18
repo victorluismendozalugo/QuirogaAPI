@@ -17,7 +17,8 @@ namespace apiQuiroga.Models
         private static AppConfigurationX _Configuracion;
 
         //Clave de seguridad del token
-        public static string Key => "Ch4ng0s!!";
+        //public static string Key => "Ch4ng0s!!";
+        public static string Key => "asdf-asdf-asdf-asdf";
 
         //Emisor del token si es necesario
         public static string ValidIssuer = "http://kragsoftware.com/";
@@ -72,7 +73,7 @@ namespace apiQuiroga.Models
         public static TokenResponseModel GetJwtUsuario(UsuarioModel usuario)
         {
             var now = DateTime.Now;
-            const int expireMinutes = 30;
+            const int expireMinutes = 900;
 
             var claims = new Claim[]
             {
@@ -98,7 +99,7 @@ namespace apiQuiroga.Models
             {
                 AccessToken = encodedJwt,
                 ExpiresIn = (int)TimeSpan.FromMinutes(expireMinutes).TotalSeconds,
-                RefreshToken = Guid.NewGuid().ToString(),
+                RefreshToken = Guid.NewGuid().ToString()
             };
 
             Globales.TokenRefreshUsuario.RemoveAll(p => p.Usuario?.IdUsuario == usuario.IdUsuario);

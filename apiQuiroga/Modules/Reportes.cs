@@ -43,10 +43,46 @@ namespace apiQuiroga.Modules
 
             _DAReportes = new DAReportes();
 
+            //Post("/ordencompra", _ => GeneraImpresionOrdenCompra());
             Post("/ordencompra", _ => RptOrdenCompra());
 
         }
 
+        private object GeneraImpresionOrdenCompra()
+        {
+            try
+            {
+                OrdenCompraModel p = this.Bind();
+
+                var r = _DAReportes.GeneraImpresionOrdenCompra(p.claveOrden, p.claveEmpresa);
+
+                return Response.AsJson(new Result<DataModel>()
+                {
+                    Value = r.Value,
+                    Message = r.Message,
+                    Data = new DataModel()
+                    {
+                        CodigoError = r.Data.CodigoError,
+                        MensajeBitacora = r.Data.MensajeBitacora,
+                        Data = r.Data.Data
+                    }
+                });
+            }
+            catch (Exception ex)
+            {
+                return Response.AsJson(new Result<DataModel>()
+                {
+                    Value = false,
+                    Message = "Problemas al obtener el cabecero de la orden",
+                    Data = new DataModel()
+                    {
+                        CodigoError = 101,
+                        MensajeBitacora = ex.Message,
+                        Data = ""
+                    }
+                });
+            }
+        }
         private object RptOrdenCompra()
         {
             String b64Str;

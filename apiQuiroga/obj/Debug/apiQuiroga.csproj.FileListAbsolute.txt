@@ -42,8 +42,8 @@ C:\Quiroga\QuirogaAPI\apiQuiroga\bin\Nancy.Authentication.Stateless.xml
 C:\Quiroga\QuirogaAPI\apiQuiroga\bin\Nancy.Hosting.Aspnet.xml
 C:\Quiroga\QuirogaAPI\apiQuiroga\bin\Newtonsoft.Json.xml
 C:\Quiroga\QuirogaAPI\apiQuiroga\bin\System.IdentityModel.Tokens.Jwt.xml
-C:\Quiroga\QuirogaAPI\apiQuiroga\obj\Debug\apiQuiroga.csprojAssemblyReference.cache
 C:\Quiroga\QuirogaAPI\apiQuiroga\obj\Debug\apiQuiroga.csproj.CoreCompileInputs.cache
 C:\Quiroga\QuirogaAPI\apiQuiroga\obj\Debug\apiQuiroga.csproj.CopyComplete
 C:\Quiroga\QuirogaAPI\apiQuiroga\obj\Debug\apiQuiroga.dll
 C:\Quiroga\QuirogaAPI\apiQuiroga\obj\Debug\apiQuiroga.pdb
+C:\Quiroga\QuirogaAPI\apiQuiroga\obj\Debug\apiQuiroga.csproj.AssemblyReference.cache

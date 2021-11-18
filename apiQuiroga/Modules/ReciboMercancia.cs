@@ -17,25 +17,25 @@ namespace apiQuiroga.Modules
 
         public ReciboMercancia() : base("/recibo")
         {
-            Before += ctx =>
-            {
-                if (!ctx.Request.Headers.Keys.Contains("api-key"))
-                {
-                    return HttpStatusCode.Unauthorized;
-                }
-                else
-                {
-                    var apikey = ctx.Request.Headers["api-key"].FirstOrDefault() ?? string.Empty;
-                    if (apikey != Globales.ApiKey)
-                    {
-                        return HttpStatusCode.Unauthorized;
-                    }
-                    else
-                    {
-                        return null;
-                    }
-                }
-            };
+            //Before += ctx =>
+            //{
+            //    if (!ctx.Request.Headers.Keys.Contains("api-key"))
+            //    {
+            //        return HttpStatusCode.Unauthorized;
+            //    }
+            //    else
+            //    {
+            //        var apikey = ctx.Request.Headers["api-key"].FirstOrDefault() ?? string.Empty;
+            //        if (apikey != Globales.ApiKey)
+            //        {
+            //            return HttpStatusCode.Unauthorized;
+            //        }
+            //        else
+            //        {
+            //            return null;
+            //        }
+            //    }
+            //};
             //this.RequiresAuthentication();
             _dAReciboMercancia = new DAReciboMercancia();
 

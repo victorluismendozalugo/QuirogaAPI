@@ -29,6 +29,6 @@ namespace apiQuiroga.Models.Movimientos
         public string lote { get; set; }
         public string fechaCaducidad { get; set; }
         public string fechaRecepcion { get; set; }
-        public char estatus { get; set; }
+        public string estatus { get; set; }
     }
 }

@@ -29,7 +29,7 @@ namespace apiQuiroga.DA
                 parametros.Add("@pCodError", ConexionDbType.Int, System.Data.ParameterDirection.Output);
 
                 var r = new UsuarioModel();
-                _conexion.ExecuteWithResults("procUsuariosIdentificar", parametros, row =>
+                _conexion2.ExecuteWithResults("procUsuariosIdentificar", parametros, row =>
                 {
                     r.IdUsuario = row["IdUsuario"].ToInt32();
                     r.Usuario = row["Usuario"].ToString();
