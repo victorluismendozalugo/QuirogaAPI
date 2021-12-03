@@ -44,32 +44,35 @@ namespace apiQuiroga.Modules
 
             _DAMovimientos = new DAMovimientos();
 
-            Post("/compras", _ => Compras());
+            //Post("/compras", _ => Compras());
             //Get("/compras", _ => Compras());
-            Post("/comprasdetalle", _ => ComprasDetalle());
-            Post("/comprasdetalle/actualizar", _ => ComprasDetalleActualiza());
+            //Post("/comprasdetalle", _ => ComprasDetalle());
+            //Post("/comprasdetalle/actualizar", _ => ComprasDetalleActualiza());
             //Get("/comprasdetalle", _ => ComprasDetalle());
-            Post("/compras/guardar", _ => ComprasGuardar());
-            Post("/compras/detguardar", _ => ComprasDetGuardar());
-            Post("/compras/actualizar", _ => ComprasActualizar());
-            Post("/compras/validar", _ => ComprasValidar());
-            Post("/compras/aplicar", _ => ComprasAplicarFactura());
-            Post("/bitacora", _ => BitacoraRecepcion());
-            Post("/bitacora/guardar", _ => BitacoraRecepcionGuardar());
-            Post("/usuarios", _ => Usuarios());
+            //Post("/compras/guardar", _ => ComprasGuardar());
+            //Post("/compras/detguardar", _ => ComprasDetGuardar());
+            //Post("/compras/actualizar", _ => ComprasActualizar());
+            //Post("/compras/validar", _ => ComprasValidar());
+            //Post("/compras/aplicar", _ => ComprasAplicarFactura());
+            //Post("/bitacora", _ => BitacoraRecepcion());
+            //Post("/bitacora/guardar", _ => BitacoraRecepcionGuardar());
+            //Post("/usuarios", _ => Usuarios());
 
-            Post("/operaciones/autorizar", _ => OperacionSupervisadaAutorizar());
+            //Post("/operaciones/autorizar", _ => OperacionSupervisadaAutorizar());
 
-            Post("/compras/cuentasXpagar", _ => CuentasXPagar());
+            //Post("/compras/cuentasXpagar", _ => CuentasXPagar());
 
-            Post("/recibo/guardar", _ => ReciboGuardar());
-            Post("/recibo/detguardar", _ => ReciboDetGuardar());
+            //Post("/recibo/guardar", _ => ReciboGuardar());
+            //Post("/recibo/detguardar", _ => ReciboDetGuardar());
 
-            ///genera-consulta y actualiza las ordenes de compra...
+            //genera-consulta y actualiza las ordenes de compra...
             Post("/ordencompra", _ => OrdenCompraCon());
             Post("/ordencompra/detalle", _ => OrdenCompraDetalleCon());
             Post("/ordencompra/guardar", _ => OrdenCompraGuardar());
-            Post("/ordencompra/detalle/guardar", _ => OrdenCompraDetalleGuardar());
+            Post("/ordencompra/autorizar", _ => OrdenCompraAutorizar());
+            //Post("/ordencompra/detalle/guardar", _ => OrdenCompraDetalleGuardar());
+            //genera-consulta y actualiza las ordenes de compra...
+            //Post("/ordencompra/detalle/guardar", _ => OrdenCompraDetalleGuardar());
             ///genera-consulta y actualiza las ordenes de compra...
             ///
             
@@ -150,11 +153,8 @@ namespace apiQuiroga.Modules
         {
             try
             {
-                //var t = this.BindToken();
                 OrdenCompraModel p = this.Bind();
-
                 var r = _DAMovimientos.OrdenCompraGuardar(p);
-
                 return Response.AsJson(new Result<DataModel>()
                 {
                     Value = r.Value,
@@ -163,7 +163,6 @@ namespace apiQuiroga.Modules
                     {
                         CodigoError = r.Data.CodigoError,
                         MensajeBitacora = r.Data.MensajeBitacora,
-                        CodigoMovimiento = r.Data.CodigoMovimiento,
                         Data = r.Data.Data
                     }
                 });
@@ -183,13 +182,13 @@ namespace apiQuiroga.Modules
                 });
             }
         }
-        private object OrdenCompraDetalleGuardar()
+        private object OrdenCompraAutorizar()
         {
             try
             {
                 OrdenCompraModel p = this.Bind();
 
-                var r = _DAMovimientos.OrdenCompraDetalleGuardar(p);
+                var r = _DAMovimientos.OrdenCompraAutorizar(p.claveOrden, p.claveEmpresa, p.estatusOrden);
 
                 return Response.AsJson(new Result<DataModel>()
                 {
@@ -208,7 +207,7 @@ namespace apiQuiroga.Modules
                 return Response.AsJson(new Result<DataModel>()
                 {
                     Value = false,
-                    Message = "Problemas al guardar el detalle de la compra",
+                    Message = "Problemas al autorizar la orden",
                     Data = new DataModel()
                     {
                         CodigoError = 101,
