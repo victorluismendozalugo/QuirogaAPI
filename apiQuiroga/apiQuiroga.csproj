@@ -124,6 +124,8 @@
     <Compile Include="Modules\AuthModule.cs" />
     <Compile Include="Modules\Catalogos.cs" />
     <Compile Include="Modules\Movimientos.cs" />
+    <Compile Include="Modules\Pedidos.cs" />
+    <Compile Include="Modules\Facturas.cs" />
     <Compile Include="Modules\RootModule.cs" />
     <Compile Include="Modules\Usuarios.cs" />
     <Compile Include="NancyExtensions.cs" />

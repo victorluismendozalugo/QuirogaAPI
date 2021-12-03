@@ -100,13 +100,14 @@
     <Compile Include="Movimientos\ComprasModel.cs" />
     <Compile Include="Movimientos\CuentasXPModel.cs" />
     <Compile Include="Movimientos\OrdenCompraModel.cs" />
-    <Compile Include="Movimientos\PedidoModel.cs" />
+    <Compile Include="Pedidos\PedidoModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TokenResponseModel.cs" />
     <Compile Include="Usuario\UsuarioCredencialesModel.cs" />
     <Compile Include="Usuario\UsuarioMenuModel.cs" />
     <Compile Include="Usuario\UsuarioModel.cs" />
     <Compile Include="Usuario\UsuarioTokenRefreshModel.cs" />
+    <Compile Include="Ventas\FacturaModel.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

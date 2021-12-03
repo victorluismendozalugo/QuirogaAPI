@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace apiQuiroga.Models.Movimientos
+namespace apiQuiroga.Models.Pedidos
 {
     public class PedidoModel
     {
