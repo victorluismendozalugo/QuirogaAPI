@@ -101,6 +101,7 @@
     <Compile Include="Movimientos\BitacoraRecepcionModel.cs" />
     <Compile Include="Movimientos\ComprasModel.cs" />
     <Compile Include="Movimientos\CuentasXPModel.cs" />
+    <Compile Include="Movimientos\FacturasRecibidasModel.cs" />
     <Compile Include="Movimientos\OrdenCompraModel.cs" />
     <Compile Include="Movimientos\PedidoModel.cs" />
     <Compile Include="Movimientos\ReciboMercanciaModel.cs" />
