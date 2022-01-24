@@ -31,8 +31,8 @@ namespace apiQuiroga.Models
 
         //valor true para que desencripte la cadena de conexion
         //poner false o quitar el segundo parametro si la cadena no está encriptada
-        public static string ConexionPrincipal => Globales.Configuracion.ConnectionString("ConexionDFQ", true);
-        public static string ConexionSecundaria => Globales.Configuracion.ConnectionString("Conexion", true);
+        public static string ConexionPrincipal => "Data Source=quirogadelnoroeste.servehttp.com;Initial Catalog=QuirogaWeb_dev;User ID=sa; password=3lDorado; Connect Timeout=60; Pooling = True; Max Pool Size = 200; MultipleActiveResultSets=True;"; //Globales.Configuracion.ConnectionString("ConexionDFQ", true);
+        public static string ConexionSecundaria => "Data Source=quirogadelnoroeste.servehttp.com;Initial Catalog=QuirogaWeb_dev;User ID=sa; password=3lDorado; Connect Timeout=60; Pooling = True; Max Pool Size = 200; MultipleActiveResultSets=True;";//Globales.Configuracion.ConnectionString("Conexion", true);
         public static string ApiKey => Globales.Configuracion.Parameter("api-key").ToString();
         public static string RutaApp;
 

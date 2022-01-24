@@ -76,6 +76,7 @@
   <ItemGroup>
     <Compile Include="AppConfigurationX.cs" />
     <Compile Include="Catalogos\AgentesModel.cs" />
+    <Compile Include="Catalogos\BuscadorProductoModel.cs" />
     <Compile Include="Catalogos\CaducidadesModel.cs" />
     <Compile Include="Catalogos\ClientesModel.cs" />
     <Compile Include="Catalogos\EmpleadosModel.cs" />
@@ -94,6 +95,13 @@
     <Compile Include="Catalogos\ProductosSAIModel.cs" />
     <Compile Include="Catalogos\ProductosTempModel.cs" />
     <Compile Include="Catalogos\ProveedoresModel.cs" />
+    <Compile Include="Catalogos\UbicacionDetModel.cs" />
+    <Compile Include="Catalogos\UbicacionModel.cs" />
+    <Compile Include="Catalogos\UbicacionAlmacenModel.cs" />
+    <Compile Include="Catalogos\UbicacionNivelModel.cs" />
+    <Compile Include="Catalogos\UbicacionPasilloModel.cs" />
+    <Compile Include="Catalogos\UbicacionRackModel.cs" />
+    <Compile Include="Catalogos\UbicacionSeccionModel.cs" />
     <Compile Include="Configuracion\MenuModel.cs" />
     <Compile Include="Configuracion\PerfilesUsuarioModel.cs" />
     <Compile Include="DataModel.cs" />
