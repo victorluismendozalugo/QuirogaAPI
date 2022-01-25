@@ -18,6 +18,7 @@
         <xs:element name="fechaOrden" type="xs:string"/>
         <xs:element name="importeTotal" type="xs:decimal"/>
         <xs:element name="provRazonSocial" type="xs:string"/>
+		<xs:element name="nombreLugarEntrega" type="xs:string"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>

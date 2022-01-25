@@ -23,7 +23,7 @@ namespace apiQuiroga.Modules
             //    {
             //        return HttpStatusCode.Unauthorized;
             //    }
-            //    else
+            //    else                                                                            
             //    {
             //        var apikey = ctx.Request.Headers["api-key"].FirstOrDefault() ?? string.Empty;
             //        if (apikey != Globales.ApiKey)
@@ -48,9 +48,7 @@ namespace apiQuiroga.Modules
             try
             {
                 UsuarioMenuModel p = this.Bind();
-
                 var r = _DAUsuario.MenuCon(p.CodigoUsuario);
-
                 return Response.AsJson(new Result<DataModel>()
                 {
                     Value = r.Value,
