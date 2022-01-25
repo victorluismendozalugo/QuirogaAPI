@@ -256,38 +256,39 @@ namespace apiQuiroga.Modules
         }
         private object CuentasXPagar()
         {
-            try
-            {
-                CuentasXPModel p = this.Bind();
+            return null;
+            //try
+            //{
+            //    CuentasXPModel p = this.Bind();
 
-                var r = _DAMovimientos.CuentasPorPagar(p.EmpresaID, p.NumeroFactura);
+            //    var r = _DAMovimientos.CuentasPorPagar(p.EmpresaID, p.NumeroFactura);
 
-                return Response.AsJson(new Result<DataModel>()
-                {
-                    Value = r.Value,
-                    Message = r.Message,
-                    Data = new DataModel()
-                    {
-                        CodigoError = r.Data.CodigoError,
-                        MensajeBitacora = r.Data.MensajeBitacora,
-                        Data = r.Data.Data
-                    }
-                });
-            }
-            catch (Exception ex)
-            {
-                return Response.AsJson(new Result<DataModel>()
-                {
-                    Value = false,
-                    Message = "Problemas al obtener las cuentas",
-                    Data = new DataModel()
-                    {
-                        CodigoError = 101,
-                        MensajeBitacora = ex.Message,
-                        Data = ""
-                    }
-                });
-            }
+            //    return Response.AsJson(new Result<DataModel>()
+            //    {
+            //        Value = r.Value,
+            //        Message = r.Message,
+            //        Data = new DataModel()
+            //        {
+            //            CodigoError = r.Data.CodigoError,
+            //            MensajeBitacora = r.Data.MensajeBitacora,
+            //            Data = r.Data.Data
+            //        }
+            //    });
+            //}
+            //catch (Exception ex)
+            //{
+            //    return Response.AsJson(new Result<DataModel>()
+            //    {
+            //        Value = false,
+            //        Message = "Problemas al obtener las cuentas",
+            //        Data = new DataModel()
+            //        {
+            //            CodigoError = 101,
+            //            MensajeBitacora = ex.Message,
+            //            Data = ""
+            //        }
+            //    });
+            //}
         }
         private object ComprasDetalle()
         {

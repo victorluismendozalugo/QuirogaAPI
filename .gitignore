@@ -391,3 +391,7 @@ Bin/
  apiQuiroga.Models/
  apiQuiroga.Models/obj
  apiQuiroga.Models/obj/
+apiQuiroga/obj/
+apiQuiroga.Models/obj
+apiQuiroga.Models/obj/
+apiQuiroga.DA/obj/

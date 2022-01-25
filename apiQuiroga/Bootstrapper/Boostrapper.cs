@@ -4,12 +4,13 @@ using Nancy;
 using Nancy.Authentication.JwtBearer;
 using Nancy.Bootstrapper;
 using Nancy.TinyIoc;
+using Newtonsoft.Json;
 using System;
 
 namespace apiQuiroga
 {
     public class Boostrapper : DefaultNancyBootstrapper
-    {
+    {        
         protected override void ApplicationStartup(TinyIoCContainer container, IPipelines pipelines)
         {
             base.ApplicationStartup(container, pipelines);
