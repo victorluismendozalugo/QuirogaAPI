@@ -23,7 +23,7 @@ namespace apiQuiroga.Modules
             _DAPedidos = new DAPedidos();
             Post("/pedidocon", _ => PedidoCon());
             Post("/pedidodetalle", _ => PedidoDetalleCon());
-
+            Post("/pedido/guardar", _ => PedidoGuardar());
         }
 
         private object PedidoCon()
@@ -32,7 +32,7 @@ namespace apiQuiroga.Modules
             {
                 PedidoModel p = this.Bind();
 
-                var r = _DAPedidos.PedidoCon(p.IDEmpresa, p.IDPedidoEnc);
+                var r = _DAPedidos.PedidoCon(p.idEmpresa, p.idPedidoEnc);
 
                 return Response.AsJson(new Result<DataModel>()
                 {
@@ -68,7 +68,7 @@ namespace apiQuiroga.Modules
             {
                 PedidoDetalleModel p = this.Bind();
 
-                var r = _DAPedidos.PedidoDetalleCon(p.IDEmpresa, p.IDPedidoEnc);
+                var r = _DAPedidos.PedidoDetalleCon(p.idEmpresa, p.idPedidoEnc);
 
                 return Response.AsJson(new Result<DataModel>()
                 {
@@ -88,6 +88,40 @@ namespace apiQuiroga.Modules
                 {
                     Value = false,
                     Message = "Problemas al obtener detalle pedido",
+                    Data = new DataModel()
+                    {
+                        CodigoError = 101,
+                        MensajeBitacora = ex.Message,
+                        Data = ""
+                    }
+                });
+            }
+        }
+
+        private object PedidoGuardar()
+        {
+            try
+            {
+                PedidoModel p = this.Bind();
+                var r = _DAPedidos.PedidoGuardar(p);
+                return Response.AsJson(new Result<DataModel>()
+                {
+                    Value = r.Value,
+                    Message = r.Message,
+                    Data = new DataModel()
+                    {
+                        CodigoError = r.Data.CodigoError,
+                        MensajeBitacora = r.Data.MensajeBitacora,
+                        Data = r.Data.Data
+                    }
+                });
+            }
+            catch (Exception ex)
+            {
+                return Response.AsJson(new Result<DataModel>()
+                {
+                    Value = false,
+                    Message = "Problemas al guardar movimiento pedido",
                     Data = new DataModel()
                     {
                         CodigoError = 101,

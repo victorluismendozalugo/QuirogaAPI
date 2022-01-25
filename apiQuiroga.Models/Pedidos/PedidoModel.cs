@@ -8,34 +8,34 @@ namespace apiQuiroga.Models.Pedidos
 {
     public class PedidoModel
     {
-        public int IDPedidoEnc { get; set; }
-        public int IDCliente { get; set; }
-        public int IDEmpresa { get; set; }
-        public DateTime FechaPedido { get; set; }
-        public string Estatus { get; set; }
-        public decimal TotalPedido { get; set; }
-        public decimal SubTotalPedido { get; set; }
-        public decimal IVA { get; set; }
-        public string Observaciones{ get; set; }    
+        public int idPedidoEnc { get; set; }
+        public int idCliente { get; set; }
+        public int idEmpresa { get; set; }
+        public DateTime fechaPedido { get; set; }
+        public string estatus { get; set; }
+        public decimal totalPedido { get; set; }
+        public decimal subTotalPedido { get; set; }
+        public decimal iva { get; set; }
+        public string observaciones{ get; set; }   
+        public string adicionadoPor { get; set; }
         public List<PedidoDetalleModel> pedidoDetalle { get; set; }
 
     }
 
     public class PedidoDetalleModel
     {
-        public int IDPedidoEnc { get; set; }
-        public int IDCliente { get; set; }
-        public int IDEmpresa { get; set; }
-        public int IDProducto { get; set; }
-        public string Descripcion { get; set; }
-        public int CantidadPedida { get; set; }
-        public int CantidadSurtida { get; set; }
-        public decimal Costo { get; set; }
-        public decimal Precio { get; set; }
-        public decimal TotalLinea { get; set; }
-        public decimal TasaIVA { get; set; }
-        public decimal IVA { get; set; }
-        public DateTime FechaPedido { get; set;  }
+        public int idPedidoEnc { get; set; }
+        public int idCliente { get; set; }
+        public int idEmpresa { get; set; }
+        public int idProducto { get; set; }
+        public string descripcion { get; set; }
+        public int cantidadPedida { get; set; }
+        public int cantidadSurtida { get; set; }
+        public decimal costo { get; set; }
+        public decimal precio { get; set; }
+        public decimal totalLinea { get; set; }
+        public decimal tasaIva { get; set; }
+        public decimal iva { get; set; }
 
     }
 }

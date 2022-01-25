@@ -18,3 +18,22 @@ C:\Quiroga\QuirogaAPI\apiQuiroga.Models\obj\Debug\apiQuiroga.Models.csproj.CoreC
 C:\Quiroga\QuirogaAPI\apiQuiroga.Models\obj\Debug\apiQuiroga.Models.csproj.CopyComplete
 C:\Quiroga\QuirogaAPI\apiQuiroga.Models\obj\Debug\apiQuiroga.Models.dll
 C:\Quiroga\QuirogaAPI\apiQuiroga.Models\obj\Debug\apiQuiroga.Models.pdb
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga.Models\bin\Debug\apiQuiroga.Models.dll.config
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga.Models\bin\Debug\apiQuiroga.Models.dll
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga.Models\bin\Debug\apiQuiroga.Models.pdb
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga.Models\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga.Models\bin\Debug\Microsoft.IdentityModel.Logging.dll
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga.Models\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga.Models\bin\Debug\Newtonsoft.Json.dll
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga.Models\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga.Models\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga.Models\bin\Debug\Microsoft.IdentityModel.Logging.xml
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga.Models\bin\Debug\Microsoft.IdentityModel.Tokens.xml
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga.Models\bin\Debug\Newtonsoft.Json.xml
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga.Models\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga.Models\obj\Debug\apiQuiroga.Models.csprojAssemblyReference.cache
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga.Models\obj\Debug\apiQuiroga.Models.Properties.Resources.resources
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga.Models\obj\Debug\apiQuiroga.Models.csproj.GenerateResource.cache
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga.Models\obj\Debug\apiQuiroga.Models.csproj.CopyComplete
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga.Models\obj\Debug\apiQuiroga.Models.dll
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga.Models\obj\Debug\apiQuiroga.Models.pdb
