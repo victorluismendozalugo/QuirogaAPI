@@ -41,9 +41,6 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="apiQuiroga.Models">
-      <HintPath>..\apiQuiroga.Models\bin\Debug\apiQuiroga.Models.dll</HintPath>
-    </Reference>
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -63,6 +60,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DABuscadores.cs" />
     <Compile Include="DACatalogos.cs" />
     <Compile Include="DAConfiguracion.cs" />
     <Compile Include="DAClientes.cs" />
@@ -72,6 +70,7 @@
     <Compile Include="DAProductosSAI.cs" />
     <Compile Include="DAReciboMercancia.cs" />
     <Compile Include="DAReportes.cs" />
+    <Compile Include="DAUbicaciones.cs" />
     <Compile Include="DAUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -100,6 +99,12 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\apiQuiroga.Models\apiQuiroga.Models.csproj">
+      <Project>{cf0bfd64-9941-47d0-ae9c-08299371d800}</Project>
+      <Name>apiQuiroga.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

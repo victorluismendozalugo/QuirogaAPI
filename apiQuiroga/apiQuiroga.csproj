@@ -128,6 +128,7 @@
     <Compile Include="Bootstrapper\Boostrapper.cs" />
     <Compile Include="DynamicModelBinder.cs" />
     <Compile Include="Modules\AuthModule.cs" />
+    <Compile Include="Modules\BuscadoresModule.cs" />
     <Compile Include="Modules\Catalogos.cs" />
     <Compile Include="Modules\Configuracion.cs" />
     <Compile Include="Modules\CuentasPorPagar.cs" />
@@ -136,6 +137,7 @@
     <Compile Include="Modules\ReciboMercancia.cs" />
     <Compile Include="Modules\Reportes.cs" />
     <Compile Include="Modules\RootModule.cs" />
+    <Compile Include="Modules\UbicacionesModule.cs" />
     <Compile Include="Modules\Usuarios.cs" />
     <Compile Include="NancyExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
