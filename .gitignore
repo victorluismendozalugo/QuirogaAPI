@@ -31,6 +31,7 @@ bld/
 [Oo]bj/
 [Ll]og/
 [Ll]ogs/
+obj/
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
@@ -386,3 +387,11 @@ Bin/
 *.vspscc
 *.vssscc
 *.sln
+ apiQuiroga/obj
+ apiQuiroga.Models/
+ apiQuiroga.Models/obj
+ apiQuiroga.Models/obj/
+apiQuiroga/obj/
+apiQuiroga.Models/obj
+apiQuiroga.Models/obj/
+apiQuiroga.DA/obj/
