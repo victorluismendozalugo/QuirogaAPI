@@ -19,6 +19,18 @@ namespace apiQuiroga.DA
             _Conexion = new Conexion(ConexionType.MSSQLServer, Globales.ConexionPrincipal);
         }
 
+        public Result<List<UbicacionAlmacenModel>> AlmacenesCrear(UbicacionAlmacenModel a)
+        {
+            var parametros = new ConexionParameters();
+            parametros.Add("@pDescripcion", ConexionDbType.VarChar, a.Descripcion);
+            parametros.Add("@pResultado", ConexionDbType.Bit, System.Data.ParameterDirection.Output);
+            parametros.Add("@pMsg", ConexionDbType.VarChar, 300, System.Data.ParameterDirection.Output, 300);
+
+            var r = _Conexion.ExecuteWithResults<UbicacionAlmacenModel>("QW_procCatUbicacionesAlmacenesCrear", parametros);
+
+            return r;
+        }
+
         public Result<List<UbicacionAlmacenModel>> AlmacenesCon()
         {
             var parametros = new ConexionParameters();
@@ -123,6 +135,19 @@ namespace apiQuiroga.DA
             parametros.Add("@pMsg", ConexionDbType.VarChar, 300, System.Data.ParameterDirection.Output, 300);
 
             var r = _Conexion.Execute("QW_procCatUbicacionesSeccionesCrear", parametros);
+
+            return r;
+
+        }
+
+        public Result AlmacenesEliminar(int idAlmacen)
+        {
+            var parametros = new ConexionParameters();
+            parametros.Add("@pID_Almacen", ConexionDbType.Int, idAlmacen);
+            parametros.Add("@pResultado", ConexionDbType.Bit, System.Data.ParameterDirection.Output);
+            parametros.Add("@pMsg", ConexionDbType.VarChar, 300, System.Data.ParameterDirection.Output, 300);
+
+            var r = _Conexion.Execute("QW_procCatUbicacionesAlmacenesEliminar", parametros);
 
             return r;
 
