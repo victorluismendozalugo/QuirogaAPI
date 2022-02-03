@@ -24,6 +24,8 @@ namespace apiQuiroga.Modules
             Post("/productos", _ => PostProductos());
 
             Get("/almacenes", _ => GetAlmacenes());
+            Post("/almacenes", _ => PostAlmacenes());
+            Post("/almacenes/eliminar", _ => DeleteAlmacenes());
 
             Get("/pasillos", _ => GetPasillos());
             Post("/pasillos", _ => PostPasillos());
@@ -42,6 +44,39 @@ namespace apiQuiroga.Modules
             Post("/secciones/eliminar", _ => DeleteSecciones());
 
             _DAUbicaciones = new DAUbicaciones();
+        }
+
+        private object DeleteAlmacenes()
+        {
+            try
+            {
+                var p = this.BindModel();
+                int idAlmacen = p.iD_Almacen;
+
+                var r = _DAUbicaciones.AlmacenesEliminar(idAlmacen);
+
+                return Response.AsJson(r);
+            }
+            catch (Exception ex)
+            {
+                return Response.AsJson(new Result(ex));
+            }
+        }
+
+        private object PostAlmacenes()
+        {
+            try
+            {
+                var p = this.Bind<UbicacionAlmacenModel>();
+
+                var r = _DAUbicaciones.AlmacenesCrear(p);
+
+                return Response.AsJson(r);
+            }
+            catch (Exception ex)
+            {
+                return Response.AsJson(new Result(ex));
+            }
         }
 
         private object PostEliminarArticulo()
