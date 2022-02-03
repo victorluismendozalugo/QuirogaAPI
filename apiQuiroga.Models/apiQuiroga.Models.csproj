@@ -112,7 +112,6 @@
     <Compile Include="Movimientos\FacturasRecibidasModel.cs" />
     <Compile Include="Movimientos\OrdenCompraModel.cs" />
     <Compile Include="Pedidos\PedidoModel.cs" />
-    <Compile Include="Movimientos\PedidoModel.cs" />
     <Compile Include="Movimientos\ReciboMercanciaModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TokenResponseModel.cs" />

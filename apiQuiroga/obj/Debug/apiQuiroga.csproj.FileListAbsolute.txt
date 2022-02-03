@@ -96,8 +96,6 @@ C:\Quiroga\QuirogaAPI\apiQuiroga\bin\Nancy.Hosting.Aspnet.xml
 C:\Quiroga\QuirogaAPI\apiQuiroga\bin\Newtonsoft.Json.xml
 C:\Quiroga\QuirogaAPI\apiQuiroga\bin\System.IdentityModel.Tokens.Jwt.xml
 C:\Quiroga\QuirogaAPI\apiQuiroga\obj\Debug\apiQuiroga.csproj.CopyComplete
-C:\Quiroga\QuirogaAPI\apiQuiroga\obj\Debug\apiQuiroga.dll
-C:\Quiroga\QuirogaAPI\apiQuiroga\obj\Debug\apiQuiroga.pdb
 D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga\obj\Debug\apiQuiroga.csprojAssemblyReference.cache
 D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga\obj\Debug\apiQuiroga.dll
 D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga\obj\Debug\apiQuiroga.pdb
@@ -195,5 +193,3 @@ C:\git\QuirogaAPI\apiQuiroga\obj\Debug\apiQuiroga.csproj.CoreCompileInputs.cache
 C:\git\QuirogaAPI\apiQuiroga\obj\Debug\apiQuiroga.csproj.CopyComplete
 C:\git\QuirogaAPI\apiQuiroga\obj\Debug\apiQuiroga.dll
 C:\git\QuirogaAPI\apiQuiroga\obj\Debug\apiQuiroga.pdb
-C:\Quiroga\QuirogaAPI\apiQuiroga\obj\Debug\apiQuiroga.dll
-C:\Quiroga\QuirogaAPI\apiQuiroga\obj\Debug\apiQuiroga.pdb
