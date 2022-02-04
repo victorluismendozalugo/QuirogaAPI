@@ -16,7 +16,27 @@ namespace apiQuiroga.Modules
         {
             Post("/productos", _ => PostProductos());
 
+            Post("/clientes", _ => PostClientes());
+
             _DABuscadores = new DABuscadores();
+        }
+
+        private object PostClientes()
+        {
+            try
+            {
+                var p = this.BindModel();
+                string buscar = p.buscar;
+                int idAgente = p.iD_Agente;
+
+                var r = _DABuscadores.Clientes(buscar, idAgente);
+
+                return Response.AsJson(r);
+            }
+            catch (Exception ex)
+            {
+                return Response.AsJson(new Result(ex));
+            }
         }
 
         private object PostProductos()

@@ -23,7 +23,7 @@ namespace apiQuiroga.Modules
             _DAPedidos = new DAPedidos();
             Post("/pedidocon", _ => PedidoCon());
             Post("/pedidodetalle", _ => PedidoDetalleCon());
-            Post("/pedido/guardar", _ => PedidoGuardar());
+            Post("/pedido/guardar", _ => PedidoGuardar());            
         }
 
         private object PedidoCon()

@@ -31,5 +31,19 @@ namespace apiQuiroga.DA
 
             return r;
         }
+        
+        public Result<List<ClienteModel>> Clientes(string buscar, int idAgente)
+        {
+
+            var parametros = new ConexionParameters();
+            parametros.Add("@pDato", ConexionDbType.VarChar, buscar);
+            parametros.Add("@pIdAgente", ConexionDbType.Int, idAgente);
+            parametros.Add("@pResultado", ConexionDbType.Bit, System.Data.ParameterDirection.Output);
+            parametros.Add("@pMensaje", ConexionDbType.VarChar, 300, System.Data.ParameterDirection.Output, 300);
+
+            var r = _Conexion.ExecuteWithResults<ClienteModel>("DFQ..QW_procClientesCon", parametros);
+
+            return r;
+        }
     }
 }

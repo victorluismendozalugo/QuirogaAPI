@@ -72,12 +72,17 @@
     <Reference Include="WarmPack">
       <HintPath>..\apiParaiso\dll\WarmPack.dll</HintPath>
     </Reference>
+    <Reference Include="WarmPack.Database, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\apiQuiroga.DA\bin\Debug\WarmPack.Database.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppConfigurationX.cs" />
     <Compile Include="Catalogos\AgentesModel.cs" />
     <Compile Include="Catalogos\BuscadorProductoModel.cs" />
     <Compile Include="Catalogos\CaducidadesModel.cs" />
+    <Compile Include="Catalogos\ClienteModel.cs" />
     <Compile Include="Catalogos\ClientesModel.cs" />
     <Compile Include="Catalogos\EmpleadosModel.cs" />
     <Compile Include="Catalogos\EmpresasModel.cs" />
@@ -114,6 +119,7 @@
     <Compile Include="Pedidos\PedidoModel.cs" />
     <Compile Include="Movimientos\ReciboMercanciaModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Surtido\SurtidoPedido.cs" />
     <Compile Include="TokenResponseModel.cs" />
     <Compile Include="Usuario\UsuarioCredencialesModel.cs" />
     <Compile Include="Usuario\UsuarioMenuModel.cs" />

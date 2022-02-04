@@ -132,6 +132,7 @@
     <Compile Include="Modules\Catalogos.cs" />
     <Compile Include="Modules\Configuracion.cs" />
     <Compile Include="Modules\Movimientos.cs" />
+    <Compile Include="Modules\SurtidoModule.cs" />
     <Compile Include="Modules\Ventas.cs" />
     <Compile Include="Modules\Pedidos.cs" />
     <Compile Include="Modules\Facturas.cs" />
