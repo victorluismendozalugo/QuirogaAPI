@@ -131,13 +131,12 @@
     <Compile Include="Modules\BuscadoresModule.cs" />
     <Compile Include="Modules\Catalogos.cs" />
     <Compile Include="Modules\Configuracion.cs" />
-    <Compile Include="Modules\Ventas.cs" />
     <Compile Include="Modules\Movimientos.cs" />
+    <Compile Include="Modules\Ventas.cs" />
     <Compile Include="Modules\Pedidos.cs" />
     <Compile Include="Modules\Facturas.cs" />
     <Compile Include="Modules\CuentasPorPagar.cs" />
     <Compile Include="Modules\FacturasRecibidas.cs" />
-    <Compile Include="Modules\Movimientos.cs" />
     <Compile Include="Modules\ReciboMercancia.cs" />
     <Compile Include="Modules\Reportes.cs" />
     <Compile Include="Modules\RootModule.cs" />
