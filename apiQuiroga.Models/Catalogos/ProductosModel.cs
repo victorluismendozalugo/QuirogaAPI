@@ -36,5 +36,10 @@
         public string ProductoGrupoSSA { get; set; }
         public string ProductoTemporalidad { get; set; }
         public int ProductoGrupoNumero { get; set; }
+
+        //manejo de ofertas
+        public decimal ProductoPrecioOferta { get; set; }
+        public string ProdFechaOferta { get; set; }
+
     }
 }

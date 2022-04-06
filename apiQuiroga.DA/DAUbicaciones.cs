@@ -16,7 +16,7 @@ namespace apiQuiroga.DA
 
         public DAUbicaciones()
         {
-            _Conexion = new Conexion(ConexionType.MSSQLServer, Globales.ConexionPrincipal);
+            _Conexion = new Conexion(ConexionType.MSSQLServer, Globales.ConexionSecundaria);
         }
 
         public Result<List<UbicacionAlmacenModel>> AlmacenesCrear(UbicacionAlmacenModel a)
@@ -215,7 +215,7 @@ namespace apiQuiroga.DA
             parametros.Add("@pID_Rack", ConexionDbType.Int, ubicacion.ID_Rack);
             parametros.Add("@pID_Nivel", ConexionDbType.Int, ubicacion.ID_Nivel);
             parametros.Add("@pID_Seccion", ConexionDbType.Int, ubicacion.ID_Seccion);
-            parametros.Add("@pLargo", ConexionDbType.Decimal, ubicacion.Largo);
+            parametros.Add("@pLargo", ConexionDbType.Decimal, ubicacion.Largo); 
             parametros.Add("@pAncho", ConexionDbType.Decimal, ubicacion.Ancho);
             parametros.Add("@pAlto", ConexionDbType.Decimal, ubicacion.Alto);
             parametros.Add("@pCapacidad", ConexionDbType.Decimal, ubicacion.Capacidad);
