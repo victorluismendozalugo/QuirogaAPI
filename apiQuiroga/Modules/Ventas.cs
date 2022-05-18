@@ -14,6 +14,7 @@ using System.Web;
 using WarmPack.Classes;
 using apiQuiroga.Models.Facturas;
 
+
 namespace apiQuiroga.Modules
 {
     public class Ventas : NancyModule
@@ -29,20 +30,27 @@ namespace apiQuiroga.Modules
 
             Post("/CuentasPCobrarcon", _ => CuentasPCobrarCon());
             //Post("/facturadetalle", _ => FacturaDetalleCon());
-<<<<<<< HEAD
+
             Post("/facturas", _ => FacturasCon());
             Post("/cajas/movimiento", _ => CajasMovimientosGuardar());
             Get("/cajas/movimiento", _ => CajasMovimientosCon());
             Get("/cajas/estatus/{IDCaja1}/{IDOrigen}", _ => CajasEstatusCon());
 
-=======
+
             Post("/CajasPedidoGuardar", _ => CajasPedidoGuardar());
             Post("/CajasPedidoActualizar", _ => CajasPedidoActualizar());
             Post("/ListadoCajasPedido", _ => ListadoCajasPedido());
             Post("/ListadoCajasAsignadas", _ => ListadoCajasAsignadas());
             Post("/ListadoCambiosCajasPedido", _ => ListadoCambiosCajasPedido());
             Post("/CajasPedidoRecibir", _ => CajasPedidoRecibir());
->>>>>>> pedidos
+
+        }
+
+        private object CajasMovimientosGuardar()
+        {
+            FacturasCajasEnviosModel p = this.Bind();
+            var r = _DAFacturas.CajasMovimientosGuardar(p);
+            return Response.AsJson(r);
         }
 
         private object CuentasPCobrarCon()
@@ -117,7 +125,6 @@ namespace apiQuiroga.Modules
         //    }
         //}
 
-<<<<<<< HEAD
 
         private object FacturasCon()
         {
@@ -126,13 +133,6 @@ namespace apiQuiroga.Modules
             return Response.AsJson(result);
         }
 
-        private object CajasMovimientosGuardar()
-        {
-            try
-            {
-                FacturasCajasEnviosModel p = this.Bind();
-                var r = _DAFacturas.CajasMovimientosGuardar(p);
-=======
         private object CajasPedidoGuardar()
         {
             try
@@ -211,7 +211,6 @@ namespace apiQuiroga.Modules
             {
                 var r = _DAVentas.ListadoCajasPedido();
 
->>>>>>> pedidos
                 return Response.AsJson(new Result<DataModel>()
                 {
                     Value = r.Value,
@@ -229,11 +228,7 @@ namespace apiQuiroga.Modules
                 return Response.AsJson(new Result<DataModel>()
                 {
                     Value = false,
-<<<<<<< HEAD
-                    Message = "Problemas al guardar el movimiento",
-=======
                     Message = "Problemas al obtener cajas",
->>>>>>> pedidos
                     Data = new DataModel()
                     {
                         CodigoError = 101,
@@ -244,21 +239,19 @@ namespace apiQuiroga.Modules
             }
         }
 
-<<<<<<< HEAD
         private object CajasMovimientosCon()
         {
             var dat = this.Bind<FacturasCajasEnviosModel>();
             var result = _DAFacturas.CajasMovimientosCon();
             return Response.AsJson(result);
         }
-         private object CajasEstatusCon()
+        private object CajasEstatusCon()
         {
             var dat = this.Bind<FacturasCajasEnviosModel>();
             var result = _DAFacturas.EstatusCajasCon(dat);
             return Response.AsJson(result);
         }
 
-=======
         private object ListadoCajasAsignadas()
         {
             try
@@ -361,8 +354,6 @@ namespace apiQuiroga.Modules
                 });
             }
         }
->>>>>>> pedidos
+
     }
-
-
 }
