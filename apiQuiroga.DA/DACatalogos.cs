@@ -1,6 +1,7 @@
 ﻿using apiQuiroga.Models;
 using apiQuiroga.Models.Catalogos;
 using System;
+using System.Collections.Generic;
 using System.Net.Http.Headers;
 using WarmPack.Classes;
 using WarmPack.Database;
@@ -190,7 +191,7 @@ namespace apiQuiroga.DA
                 parametros.Add("@pMsg", ConexionDbType.VarChar, 300, System.Data.ParameterDirection.Output, 300);
                 parametros.Add("@pCodError", ConexionDbType.Int, System.Data.ParameterDirection.Output);
 
-                var r = _conexion2.ExecuteWithResults<FormulasModel>("QW_procFormulasCon", parametros);
+                var r = _conexion.ExecuteWithResults<FormulasModel>("QW_procFormulasCon", parametros);
 
                 return new Result<DataModel>()
                 {
@@ -230,7 +231,7 @@ namespace apiQuiroga.DA
                 parametros.Add("@pMsg", ConexionDbType.VarChar, 300, System.Data.ParameterDirection.Output, 300);
                 parametros.Add("@pCodError", ConexionDbType.Int, System.Data.ParameterDirection.Output);
 
-                var r = _conexion2.Execute("QW_procFormulasGuardar", parametros);
+                var r = _conexion.Execute("QW_procFormulasGuardar", parametros);
 
                 return new Result<DataModel>()
                 {
@@ -1301,6 +1302,20 @@ namespace apiQuiroga.DA
             }
         }
 
+        public Result<List<AgentesDFQModel>> Agentes()
+        {
+
+            var parametros = new ConexionParameters();
+            parametros.Add("@pResultado", ConexionDbType.Bit, System.Data.ParameterDirection.Output);
+            parametros.Add("@pMsg", ConexionDbType.VarChar, 300, System.Data.ParameterDirection.Output, 300);
+            parametros.Add("@pCodError", ConexionDbType.Int, System.Data.ParameterDirection.Output);
+
+            var r = _conexion2.ExecuteWithResults<AgentesDFQModel>("QW_procAgentesCon", parametros);
+
+            return r;
+
+        }
+
         public Result<DataModel> Clientes(int idCliente)
         {
             var parametros = new ConexionParameters();
@@ -1457,6 +1472,21 @@ namespace apiQuiroga.DA
                     }
                 };
             }
+        }
+
+        public Result<List<ProductosModel>> ProductosDescripcionesCon(ProductosModel producto)
+        {
+
+            var parametros = new ConexionParameters();
+            parametros.Add("@pProductoDesc", ConexionDbType.VarChar, producto.ProductoDesc);
+            parametros.Add("@pResultado", ConexionDbType.Bit, System.Data.ParameterDirection.Output);
+            parametros.Add("@pMsg", ConexionDbType.VarChar, 300, System.Data.ParameterDirection.Output, 300);
+            parametros.Add("@pCodError", ConexionDbType.Int, System.Data.ParameterDirection.Output);
+
+            var r = _conexion.ExecuteWithResults<ProductosModel>("QW_procProductosDescripcionCon", parametros);
+
+            return r;
+
         }
     }
 }

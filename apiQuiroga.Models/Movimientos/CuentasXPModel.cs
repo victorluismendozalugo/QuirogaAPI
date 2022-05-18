@@ -27,7 +27,7 @@ namespace apiQuiroga.Models.Movimientos
         public decimal DsctoEspecial { get; set; }
         public decimal DsctoDevoluciones { get; set; }
         public decimal DsctoFaltantes { get; set; }
-        public int UsuarioRegistro { get; set; }
+        public string UsuarioRegistro { get; set; }
         public string FechaRegistro { get; set; }
 
         public string Cheque { get; set; }

@@ -14,7 +14,7 @@ namespace apiQuiroga.Modules
     {
         private readonly DACatalogos _DACatalogos = null;
         private readonly DAProductosSAI _DACatalogosSAI = null;
-        
+
 
         public Catalogos() : base("/catalogo")
         {
@@ -66,6 +66,8 @@ namespace apiQuiroga.Modules
             Post("/presentaciones/guardar", _ => PresentacionesGuardar());
 
             Post("/productos", _ => Productos());
+            Get("/productos/{productoDesc}", _ => GetProductos());
+
             Post("/productosDescripcion", _ => ProductosDescripcion());
 
             Post("/productos/scrolling", _ => ProductosScrolling());
@@ -84,12 +86,13 @@ namespace apiQuiroga.Modules
             Post("/clientesFiltro", _ => ClientesFiltro());
 
             Post("/agentes", _ => Agentes());
+            Get("/agentes", _ => GetAgentes());
             Post("/empresas", _ => Empresas());
 
             Post("/medicos", _ => Medicos());
             Post("/medicos/guardar", _ => MedicosGuardar());
 
-            Post("/paqueterias", _ => Paqueterias());
+            //Post("/paqueterias", _ => Paqueterias());
 
             Post("/operaciones", _ => OperacionesSupervisadas());
             Post("/productos/sai", _ => ProductosSAI());
@@ -413,9 +416,9 @@ namespace apiQuiroga.Modules
                         MensajeBitacora = ex.Message,
                         Data = ""
                     }
-                });
+                });                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
             }
-        }
+        }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
         private object LaboratoriosGuardar()
         {
             try
@@ -1017,6 +1020,13 @@ namespace apiQuiroga.Modules
                 });
             }
         }
+
+        private object GetProductos()
+        {
+            var dat = this.Bind<ProductosModel>();
+            var result = _DACatalogos.ProductosDescripcionesCon(dat);
+            return Response.AsJson(result);
+        }
         private object Empleados()
         {
             try
@@ -1161,41 +1171,6 @@ namespace apiQuiroga.Modules
                 });
             }
         }
-        private object Paqueterias()
-        {
-            try
-            {
-                PaqueteriasModel p = this.Bind();
-
-                var r = _DACatalogos.Paqueterias(p.paqueteriaID);
-
-                return Response.AsJson(new Result<DataModel>()
-                {
-                    Value = r.Value,
-                    Message = r.Message,
-                    Data = new DataModel()
-                    {
-                        CodigoError = r.Data.CodigoError,
-                        MensajeBitacora = r.Data.MensajeBitacora,
-                        Data = r.Data.Data
-                    }
-                });
-            }
-            catch (Exception ex)
-            {
-                return Response.AsJson(new Result<DataModel>()
-                {
-                    Value = false,
-                    Message = "Problemas en catalogo de paqueterias",
-                    Data = new DataModel()
-                    {
-                        CodigoError = 101,
-                        MensajeBitacora = ex.Message,
-                        Data = ""
-                    }
-                });
-            }
-        }
         private object Agentes()
         {
             try
@@ -1231,6 +1206,12 @@ namespace apiQuiroga.Modules
                     }
                 });
             }
+        }
+
+        private object GetAgentes()
+        {
+            var result = _DACatalogos.Agentes();
+            return Response.AsJson(result);
         }
         private object Clientes()
         {

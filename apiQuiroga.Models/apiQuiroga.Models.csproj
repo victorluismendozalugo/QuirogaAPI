@@ -105,6 +105,7 @@
     <Compile Include="Configuracion\MenuModel.cs" />
     <Compile Include="Configuracion\PerfilesUsuarioModel.cs" />
     <Compile Include="DataModel.cs" />
+    <Compile Include="Facturas\FacturasCajasEnviosModel.cs" />
     <Compile Include="Globales.cs" />
     <Compile Include="Movimientos\BitacoraRecepcionModel.cs" />
     <Compile Include="Movimientos\ComprasModel.cs" />

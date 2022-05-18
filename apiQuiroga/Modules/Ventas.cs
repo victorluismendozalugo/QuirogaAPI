@@ -11,18 +11,27 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using WarmPack.Classes;
+using apiQuiroga.Models.Facturas;
 
 namespace apiQuiroga.Modules
 {
     public class Ventas : NancyModule
     {
         private readonly DAVentas _DAVentas = null;
+        private readonly DAFacturasCajasEnvios _DAFacturas = null;
 
         public Ventas() : base("/Ventas")
         {
             _DAVentas = new DAVentas();
+            _DAFacturas = new DAFacturasCajasEnvios();
+
+
             Post("/CuentasPCobrarcon", _ => CuentasPCobrarCon());
             //Post("/facturadetalle", _ => FacturaDetalleCon());
+            Post("/facturas", _ => FacturasCon());
+            Post("/cajas/movimiento", _ => CajasMovimientosGuardar());
+            Get("/cajas/movimiento", _ => CajasMovimientosCon());
+            Get("/cajas/estatus/{IDCaja1}/{IDOrigen}", _ => CajasEstatusCon());
 
         }
 
@@ -98,7 +107,62 @@ namespace apiQuiroga.Modules
         //    }
         //}
 
+
+        private object FacturasCon()
+        {
+            var dat = this.Bind<FacturasCajasEnviosModel>();
+            var result = _DAFacturas.FacturasCon(dat);
+            return Response.AsJson(result);
+        }
+
+        private object CajasMovimientosGuardar()
+        {
+            try
+            {
+                FacturasCajasEnviosModel p = this.Bind();
+                var r = _DAFacturas.CajasMovimientosGuardar(p);
+                return Response.AsJson(new Result<DataModel>()
+                {
+                    Value = r.Value,
+                    Message = r.Message,
+                    Data = new DataModel()
+                    {
+                        CodigoError = r.Data.CodigoError,
+                        MensajeBitacora = r.Data.MensajeBitacora,
+                        Data = r.Data.Data
+                    }
+                });
+            }
+            catch (Exception ex)
+            {
+                return Response.AsJson(new Result<DataModel>()
+                {
+                    Value = false,
+                    Message = "Problemas al guardar el movimiento",
+                    Data = new DataModel()
+                    {
+                        CodigoError = 101,
+                        MensajeBitacora = ex.Message,
+                        Data = ""
+                    }
+                });
+            }
+        }
+
+        private object CajasMovimientosCon()
+        {
+            var dat = this.Bind<FacturasCajasEnviosModel>();
+            var result = _DAFacturas.CajasMovimientosCon();
+            return Response.AsJson(result);
+        }
+         private object CajasEstatusCon()
+        {
+            var dat = this.Bind<FacturasCajasEnviosModel>();
+            var result = _DAFacturas.EstatusCajasCon(dat);
+            return Response.AsJson(result);
+        }
+
     }
 
-    
+
 }

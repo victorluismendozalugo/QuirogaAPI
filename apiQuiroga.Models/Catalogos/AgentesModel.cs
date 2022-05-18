@@ -26,4 +26,12 @@ namespace apiQuiroga.Models.Catalogos
         public int AlmacenVirtual { get; set; }
 
     }
+    public class AgentesDFQModel
+    {
+        public int IDAgente { get; set; }
+        public string Nombre { get; set; }
+        public string Estatus { get; set; }
+        public int IDCedis { get; set; }
+        public int SAIAgente { get; set; }
+    }
 }

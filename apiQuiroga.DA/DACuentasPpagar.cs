@@ -98,5 +98,27 @@ namespace apiQuiroga.DA
                 };
             }
         }
+
+        public Result CuentasPorPagarGuardar(CuentasXPModel cuentas)
+        {
+            var parametros = new ConexionParameters();
+            parametros.Add("@pIDMovimiento", ConexionDbType.Int, cuentas.IDMovimiento);
+            parametros.Add("@pIDEmpresa", ConexionDbType.Int, cuentas.IDEmpresa);
+            parametros.Add("@pIDFactura", ConexionDbType.VarChar, cuentas.IDFactura);
+            parametros.Add("@pCheque", ConexionDbType.VarChar, cuentas.Cheque);
+            parametros.Add("@pConcepto", ConexionDbType.VarChar, cuentas.Concepto);
+            parametros.Add("@pFechaPago", ConexionDbType.VarChar, cuentas.FechaPago);
+            parametros.Add("@pImporte", ConexionDbType.Decimal, cuentas.Importe);
+            parametros.Add("@pImporteDescuento", ConexionDbType.Decimal, cuentas.ImporteDescuento);
+            parametros.Add("@pUsuarioRegistro", ConexionDbType.VarChar, cuentas.UsuarioRegistro);
+
+            parametros.Add("@pResultado", ConexionDbType.Bit, System.Data.ParameterDirection.Output);
+            parametros.Add("@pMsg", ConexionDbType.VarChar, 300, System.Data.ParameterDirection.Output, 300);
+
+            var r = _conexion.Execute("QW_procCuentasPorPagarGuardar", parametros);
+
+            return r;
+
+        }
     }
 }

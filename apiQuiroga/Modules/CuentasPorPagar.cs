@@ -40,6 +40,8 @@ namespace apiQuiroga.Modules
             Get("/consultar/{IDEmpresa}/{IDMovimiento}", p => CuentasPorPagarCon(p));
             Get("/consultar/detalle/{IDEmpresa}/{IDMovimiento}", p => CuentasPorPagarDetalleCon(p));
             Get("/consultar/{IDEmpresa}", p => CuentasPorPagarCon(p));
+
+            Post("/pagar", _ => CuentasPorPagarGuardar());
         }
 
 
@@ -53,6 +55,13 @@ namespace apiQuiroga.Modules
         {
             var dat = this.Bind<CuentasXPModel>();
             var result = _DACuentasPpagar.CuentasPorPagarDetalleCon(dat);
+            return Response.AsJson(result);
+        }
+
+        private object CuentasPorPagarGuardar()
+        {
+            CuentasXPModel p = this.Bind();
+            var result = _DACuentasPpagar.CuentasPorPagarGuardar(p);
             return Response.AsJson(result);
         }
     }

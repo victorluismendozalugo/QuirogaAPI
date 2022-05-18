@@ -64,6 +64,7 @@
     <Compile Include="DACatalogos.cs" />
     <Compile Include="DAConfiguracion.cs" />
     <Compile Include="DAClientes.cs" />
+    <Compile Include="DAFacturasCajasEnvios.cs" />
     <Compile Include="DAProductos.cs" />
     <Compile Include="DAVentas.cs" />
     <Compile Include="DACuentasPpagar.cs" />

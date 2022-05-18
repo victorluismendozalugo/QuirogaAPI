@@ -42,4 +42,10 @@
         public string ProdFechaOferta { get; set; }
 
     }
+
+    public class ProductosModelDescripciones
+    {
+        public int ProductoID { get; set; }
+        public string ProductoDesc { get; set; }
+    }
 }
