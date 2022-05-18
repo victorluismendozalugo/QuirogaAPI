@@ -13,21 +13,37 @@
         public string ClienteFechaRegistro { get; set; }
         public string ClienteFechaModificacion { get; set; }
         public int ClienteGrupoClientes { get; set; }
-        public string ClienteEmail { get; set; }
-        public string ClienteCtaContable { get; set; }
+        public string ClienteEmail { get; set; }        
         public string ClienteAdicionadoPor { get; set; }
         public string ClienteModificadoPor { get; set; }
-        public string ClienteTipoPersona { get; set; }
-        public string ClienteResponsableFiscal { get; set; }
-        public string ClienteEmailResponsable { get; set; }
-        public int ClientePlazo { get; set; }
         public int ClienteCveEstado { get; set; }
         public string ClienteEstadoDesc { get; set; }
         public int ClienteCveMunicipio { get; set; }
         public string ClienteMunicipioDesc { get; set; }     
+        public int ClienteDiaVisita { get; set; }
+        public int ClienteIdAgente{ get; set; }
         public decimal ClienteSaldo { get; set; }
-        public string ClienteEstatus { get; set; }
+        public string ClienteEstatus { get; set; }    
+        public string Usuario { get; set; }
+        public ClienteDatosFiscalesModel DatosFiscales { get; set; }
 
+    }
+
+    public class ClienteDatosFiscalesModel
+    {
+        public int ClienteID { get; set; }
+        public decimal LimiteCredito { get; set; }
+        public int PlazoPago { get; set; }
+        public string CuentaContable { get; set; }
+        public decimal LimitePorFactura { get; set; }
+        public int IdBanco { get; set; }
+        public string DescripcionBanco { get; set; }
+        public string FormaDePago { get; set; }
+        public string MetodoPago { get; set; }
+        public string UsoCfdi { get; set; }
+        public string TipoPersona { get; set; }
+        public string ResponsableFiscal { get; set; }
+        public string EmailResponsable { get; set; }
 
     }
 }

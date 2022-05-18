@@ -2,6 +2,7 @@
 using apiQuiroga.Models;
 using apiQuiroga.Models.Catalogos;
 using apiQuiroga.Models.Ventas;
+using apiQuiroga.Models.CajasPedido;
 using apiQuiroga.Models.Usuario;
 using Nancy;
 using Nancy.ModelBinding;
@@ -23,7 +24,12 @@ namespace apiQuiroga.Modules
             _DAVentas = new DAVentas();
             Post("/CuentasPCobrarcon", _ => CuentasPCobrarCon());
             //Post("/facturadetalle", _ => FacturaDetalleCon());
-
+            Post("/CajasPedidoGuardar", _ => CajasPedidoGuardar());
+            Post("/CajasPedidoActualizar", _ => CajasPedidoActualizar());
+            Post("/ListadoCajasPedido", _ => ListadoCajasPedido());
+            Post("/ListadoCajasAsignadas", _ => ListadoCajasAsignadas());
+            Post("/ListadoCambiosCajasPedido", _ => ListadoCambiosCajasPedido());
+            Post("/CajasPedidoRecibir", _ => CajasPedidoRecibir());
         }
 
         private object CuentasPCobrarCon()
@@ -98,7 +104,215 @@ namespace apiQuiroga.Modules
         //    }
         //}
 
+        private object CajasPedidoGuardar()
+        {
+            try
+            {
+                CajasPedidoModel p = this.Bind();
+
+                string mensaje = _DAVentas.CajasPedidoGuardar(p.numeroCaja, p.estatusCaja, p.usuario);
+
+                return Response.AsJson(new Result<DataModel>()
+                {
+                    Value = mensaje == "" ? true : false,
+                    Message = mensaje == "" ? "" : mensaje,
+                    Data = new DataModel()
+                    {
+                        CodigoError = 0,
+                        MensajeBitacora = "",
+                        Data = mensaje
+                    }
+                }); ;
+            }
+            catch (Exception ex)
+            {
+                return Response.AsJson(new Result<DataModel>()
+                {
+                    Value = false,
+                    Message = "Problemas al guardar caja",
+                    Data = new DataModel()
+                    {
+                        CodigoError = 101,
+                        MensajeBitacora = ex.Message,
+                        Data = ""
+                    }
+                });
+            }
+        }
+
+        private object CajasPedidoActualizar()
+        {
+            try
+            {
+                CajasPedidoModel p = this.Bind();
+
+                int NumeroCaja = _DAVentas.CajasPedidoActualizar(p.numeroCaja, p.estatusCaja, p.motivoCambio, p.usuario);
+
+                return Response.AsJson(new Result<DataModel>()
+                {
+                    Value = true,
+                    Message = "",
+                    Data = new DataModel()
+                    {
+                        CodigoError = 0,
+                        MensajeBitacora = "",
+                        Data = NumeroCaja.ToString()
+                    }
+                }); ;
+            }
+            catch (Exception ex)
+            {
+                return Response.AsJson(new Result<DataModel>()
+                {
+                    Value = false,
+                    Message = "Problemas al actualizar caja",
+                    Data = new DataModel()
+                    {
+                        CodigoError = 101,
+                        MensajeBitacora = ex.Message,
+                        Data = ""
+                    }
+                });
+            }
+        }
+
+        private object ListadoCajasPedido()
+        {
+            try
+            {
+                var r = _DAVentas.ListadoCajasPedido();
+
+                return Response.AsJson(new Result<DataModel>()
+                {
+                    Value = r.Value,
+                    Message = r.Message,
+                    Data = new DataModel()
+                    {
+                        CodigoError = r.Data.CodigoError,
+                        MensajeBitacora = r.Data.MensajeBitacora,
+                        Data = r.Data.Data
+                    }
+                });
+            }
+            catch (Exception ex)
+            {
+                return Response.AsJson(new Result<DataModel>()
+                {
+                    Value = false,
+                    Message = "Problemas al obtener cajas",
+                    Data = new DataModel()
+                    {
+                        CodigoError = 101,
+                        MensajeBitacora = ex.Message,
+                        Data = ""
+                    }
+                });
+            }
+        }
+
+        private object ListadoCajasAsignadas()
+        {
+            try
+            {
+                CajasPedidoModel p = this.Bind();
+                var r = _DAVentas.ListadoCajasAsignadas(p.idUbicacion);
+
+                return Response.AsJson(new Result<DataModel>()
+                {
+                    Value = r.Value,
+                    Message = r.Message,
+                    Data = new DataModel()
+                    {
+                        CodigoError = r.Data.CodigoError,
+                        MensajeBitacora = r.Data.MensajeBitacora,
+                        Data = r.Data.Data
+                    }
+                });
+            }
+            catch (Exception ex)
+            {
+                return Response.AsJson(new Result<DataModel>()
+                {
+                    Value = false,
+                    Message = "Problemas al obtener cajas asignadas",
+                    Data = new DataModel()
+                    {
+                        CodigoError = 101,
+                        MensajeBitacora = ex.Message,
+                        Data = ""
+                    }
+                });
+            }
+        }
+
+        private object ListadoCambiosCajasPedido()
+        {
+            try
+            {
+                CajasPedidoDetalleCambios p = this.Bind();
+                var r = _DAVentas.ListadoCambiosCajasPedido(p.IdCaja);
+
+                return Response.AsJson(new Result<DataModel>()
+                {
+                    Value = true,
+                    Message = "",
+                    Data = new DataModel()
+                    {
+                        CodigoError = 0,
+                        MensajeBitacora = "",
+                        Data = r.Data.Data
+                    }
+                });
+            }
+            catch (Exception ex)
+            {
+                return Response.AsJson(new Result<DataModel>()
+                {
+                    Value = false,
+                    Message = "Problemas al obtener detalle cambios",
+                    Data = new DataModel()
+                    {
+                        CodigoError = 101,
+                        MensajeBitacora = ex.Message,
+                        Data = ""
+                    }
+                });
+            }
+        }
+
+        private object CajasPedidoRecibir()
+        {
+            try
+            {
+                CajasPedidoModel p = this.Bind();
+                var r = _DAVentas.CajasPedidoRecibir(p);
+                return Response.AsJson(new Result<DataModel>()
+                {
+                    Value = r.Value,
+                    Message = r.Message,
+                    Data = new DataModel()
+                    {
+                        MensajeBitacora = r.Data.MensajeBitacora,
+                        Data = r.Data.Data
+                    }
+                });
+            }
+            catch (Exception ex)
+            {
+                return Response.AsJson(new Result<DataModel>()
+                {
+                    Value = false,
+                    Message = "Problemas al recibir cajas de surtido",
+                    Data = new DataModel()
+                    {
+                        CodigoError = 101,
+                        MensajeBitacora = ex.Message,
+                        Data = ""
+                    }
+                });
+            }
+        }
     }
 
-    
+
 }

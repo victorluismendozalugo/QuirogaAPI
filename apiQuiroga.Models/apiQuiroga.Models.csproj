@@ -112,7 +112,6 @@
     <Compile Include="Movimientos\FacturasRecibidasModel.cs" />
     <Compile Include="Movimientos\OrdenCompraModel.cs" />
     <Compile Include="Pedidos\PedidoModel.cs" />
-    <Compile Include="Movimientos\PedidoModel.cs" />
     <Compile Include="Movimientos\ReciboMercanciaModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TokenResponseModel.cs" />
@@ -120,6 +119,7 @@
     <Compile Include="Usuario\UsuarioMenuModel.cs" />
     <Compile Include="Usuario\UsuarioModel.cs" />
     <Compile Include="Usuario\UsuarioTokenRefreshModel.cs" />
+    <Compile Include="Ventas\CajasModel.cs" />
     <Compile Include="Ventas\VentasModel.cs" />
     <Compile Include="Ventas\FacturaModel.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">

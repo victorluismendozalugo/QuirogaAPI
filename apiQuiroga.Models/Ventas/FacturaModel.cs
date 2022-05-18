@@ -10,6 +10,7 @@ namespace apiQuiroga.Models.Facturas
     {
         public int IDFacturaEnc { get; set; }
         public int IDCliente { get; set; }
+        public string Rfc { get; set; }
         public string RSCliente { get; set; }
         public int IDEmpresa { get; set; }
         public string Serie { get; set; }

@@ -24,6 +24,8 @@ namespace apiQuiroga.Modules
             Post("/pedidocon", _ => PedidoCon());
             Post("/pedidodetalle", _ => PedidoDetalleCon());
             Post("/pedido/guardar", _ => PedidoGuardar());
+            Get("/foliosucursal/{idEmpresa}", _ => ObtenFolioPedidoPorSucursal());
+            Post("/productos", _ => PostProductos());
         }
 
         private object PedidoCon()
@@ -131,8 +133,31 @@ namespace apiQuiroga.Modules
                 });
             }
         }
+        private object ObtenFolioPedidoPorSucursal()
+        {
+            var p = this.Bind<PedidoModel>();
+            var result = _DAPedidos.ObtenFolioPedidoPorSucursal(p);
+            return Response.AsJson(result);
+        }
+
+        private object PostProductos()
+        {
+            try
+            {
+                var p = this.BindModel();
+                string buscar = p.buscar;
+                int codCliente = p.codCliente;
+                int codAgente = p.codAgente;
+
+                var r = _DAPedidos.Productos(buscar, codCliente, codAgente);
+
+                return Response.AsJson(r);
+            }
+            catch (Exception ex)
+            {
+                return Response.AsJson(new Result(ex));
+            }
+        }
 
     }
-
-    
 }

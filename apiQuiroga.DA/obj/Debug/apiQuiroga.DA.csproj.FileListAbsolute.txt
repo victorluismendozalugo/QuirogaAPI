@@ -1,30 +1,6 @@
-C:\Quiroga\QuirogaAPI\apiQuiroga.DA\bin\Debug\apiQuiroga.DA.dll.config
-C:\Quiroga\QuirogaAPI\apiQuiroga.DA\bin\Debug\apiQuiroga.DA.dll
-C:\Quiroga\QuirogaAPI\apiQuiroga.DA\bin\Debug\apiQuiroga.DA.pdb
-C:\Quiroga\QuirogaAPI\apiQuiroga.DA\bin\Debug\apiQuiroga.Models.dll
-C:\Quiroga\QuirogaAPI\apiQuiroga.DA\bin\Debug\Newtonsoft.Json.dll
-C:\Quiroga\QuirogaAPI\apiQuiroga.DA\bin\Debug\Microsoft.IdentityModel.Tokens.dll
-C:\Quiroga\QuirogaAPI\apiQuiroga.DA\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
-C:\Quiroga\QuirogaAPI\apiQuiroga.DA\bin\Debug\Microsoft.IdentityModel.Logging.dll
-C:\Quiroga\QuirogaAPI\apiQuiroga.DA\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
-C:\Quiroga\QuirogaAPI\apiQuiroga.DA\bin\Debug\apiQuiroga.Models.pdb
-C:\Quiroga\QuirogaAPI\apiQuiroga.DA\bin\Debug\apiQuiroga.Models.dll.config
-C:\Quiroga\QuirogaAPI\apiQuiroga.DA\bin\Debug\Newtonsoft.Json.xml
-C:\Quiroga\QuirogaAPI\apiQuiroga.DA\bin\Debug\Microsoft.IdentityModel.Tokens.xml
-C:\Quiroga\QuirogaAPI\apiQuiroga.DA\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
-C:\Quiroga\QuirogaAPI\apiQuiroga.DA\bin\Debug\Microsoft.IdentityModel.Logging.xml
-C:\Quiroga\QuirogaAPI\apiQuiroga.DA\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
-C:\Quiroga\QuirogaAPI\apiQuiroga.DA\obj\Debug\apiQuiroga.DA.Properties.Resources.resources
-C:\Quiroga\QuirogaAPI\apiQuiroga.DA\obj\Debug\apiQuiroga.DA.csproj.GenerateResource.cache
-C:\Quiroga\QuirogaAPI\apiQuiroga.DA\obj\Debug\apiQuiroga.DA.csproj.CoreCompileInputs.cache
-C:\Quiroga\QuirogaAPI\apiQuiroga.DA\obj\Debug\apiQuiroga.DA.csproj.CopyComplete
-C:\Quiroga\QuirogaAPI\apiQuiroga.DA\obj\Debug\apiQuiroga.DA.dll
-C:\Quiroga\QuirogaAPI\apiQuiroga.DA\obj\Debug\apiQuiroga.DA.pdb
 D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga.DA\obj\Debug\apiQuiroga.DA.csprojAssemblyReference.cache
 D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga.DA\obj\Debug\apiQuiroga.DA.Properties.Resources.resources
 D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga.DA\obj\Debug\apiQuiroga.DA.csproj.GenerateResource.cache
-D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga.DA\obj\Debug\apiQuiroga.DA.dll
-D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga.DA\obj\Debug\apiQuiroga.DA.pdb
 D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga.DA\bin\Debug\apiQuiroga.DA.dll.config
 D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga.DA\bin\Debug\apiQuiroga.DA.dll
 D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga.DA\bin\Debug\apiQuiroga.DA.pdb
@@ -42,50 +18,51 @@ D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiro
 D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga.DA\bin\Debug\Microsoft.IdentityModel.Logging.xml
 D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga.DA\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
 D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga.DA\obj\Debug\apiQuiroga.DA.csproj.CopyComplete
-C:\git\QuirogaAPI\apiQuiroga.DA\bin\Debug\apiQuiroga.DA.dll.config
-C:\git\QuirogaAPI\apiQuiroga.DA\bin\Debug\apiQuiroga.DA.dll
-C:\git\QuirogaAPI\apiQuiroga.DA\bin\Debug\apiQuiroga.DA.pdb
-C:\git\QuirogaAPI\apiQuiroga.DA\bin\Debug\apiQuiroga.Models.dll
-C:\git\QuirogaAPI\apiQuiroga.DA\bin\Debug\Newtonsoft.Json.dll
-C:\git\QuirogaAPI\apiQuiroga.DA\bin\Debug\Microsoft.IdentityModel.Tokens.dll
-C:\git\QuirogaAPI\apiQuiroga.DA\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
-C:\git\QuirogaAPI\apiQuiroga.DA\bin\Debug\Microsoft.IdentityModel.Logging.dll
-C:\git\QuirogaAPI\apiQuiroga.DA\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
-C:\git\QuirogaAPI\apiQuiroga.DA\bin\Debug\apiQuiroga.Models.pdb
-C:\git\QuirogaAPI\apiQuiroga.DA\bin\Debug\apiQuiroga.Models.dll.config
-C:\git\QuirogaAPI\apiQuiroga.DA\bin\Debug\Newtonsoft.Json.xml
-C:\git\QuirogaAPI\apiQuiroga.DA\bin\Debug\Microsoft.IdentityModel.Tokens.xml
-C:\git\QuirogaAPI\apiQuiroga.DA\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
-C:\git\QuirogaAPI\apiQuiroga.DA\bin\Debug\Microsoft.IdentityModel.Logging.xml
-C:\git\QuirogaAPI\apiQuiroga.DA\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
-C:\git\QuirogaAPI\apiQuiroga.DA\obj\Debug\apiQuiroga.DA.csprojAssemblyReference.cache
-C:\git\QuirogaAPI\apiQuiroga.DA\obj\Debug\apiQuiroga.DA.Properties.Resources.resources
-C:\git\QuirogaAPI\apiQuiroga.DA\obj\Debug\apiQuiroga.DA.csproj.GenerateResource.cache
-C:\git\QuirogaAPI\apiQuiroga.DA\obj\Debug\apiQuiroga.DA.csproj.CoreCompileInputs.cache
-C:\git\QuirogaAPI\apiQuiroga.DA\obj\Debug\apiQuiroga.DA.csproj.CopyComplete
-C:\git\QuirogaAPI\apiQuiroga.DA\obj\Debug\apiQuiroga.DA.dll
-C:\git\QuirogaAPI\apiQuiroga.DA\obj\Debug\apiQuiroga.DA.pdb
-C:\Quiroga\QuirogaAPI\apiQuiroga.DA\obj\Debug\apiQuiroga.DA.csproj.AssemblyReference.cache
-C:\Users\Equipo\source\repos\Quiroga\QuirogaAPI\apiQuiroga.DA\obj\Debug\apiQuiroga.DA.csproj.AssemblyReference.cache
-C:\Users\Equipo\source\repos\Quiroga\QuirogaAPI\apiQuiroga.DA\obj\Debug\apiQuiroga.DA.Properties.Resources.resources
-C:\Users\Equipo\source\repos\Quiroga\QuirogaAPI\apiQuiroga.DA\obj\Debug\apiQuiroga.DA.csproj.GenerateResource.cache
-C:\Users\Equipo\source\repos\Quiroga\QuirogaAPI\apiQuiroga.DA\obj\Debug\apiQuiroga.DA.csproj.CoreCompileInputs.cache
-C:\Users\Equipo\source\repos\Quiroga\QuirogaAPI\apiQuiroga.DA\bin\Debug\apiQuiroga.DA.dll.config
-C:\Users\Equipo\source\repos\Quiroga\QuirogaAPI\apiQuiroga.DA\bin\Debug\apiQuiroga.DA.dll
-C:\Users\Equipo\source\repos\Quiroga\QuirogaAPI\apiQuiroga.DA\bin\Debug\apiQuiroga.DA.pdb
-C:\Users\Equipo\source\repos\Quiroga\QuirogaAPI\apiQuiroga.DA\bin\Debug\apiQuiroga.Models.dll
-C:\Users\Equipo\source\repos\Quiroga\QuirogaAPI\apiQuiroga.DA\bin\Debug\Newtonsoft.Json.dll
-C:\Users\Equipo\source\repos\Quiroga\QuirogaAPI\apiQuiroga.DA\bin\Debug\Microsoft.IdentityModel.Tokens.dll
-C:\Users\Equipo\source\repos\Quiroga\QuirogaAPI\apiQuiroga.DA\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
-C:\Users\Equipo\source\repos\Quiroga\QuirogaAPI\apiQuiroga.DA\bin\Debug\Microsoft.IdentityModel.Logging.dll
-C:\Users\Equipo\source\repos\Quiroga\QuirogaAPI\apiQuiroga.DA\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
-C:\Users\Equipo\source\repos\Quiroga\QuirogaAPI\apiQuiroga.DA\bin\Debug\apiQuiroga.Models.pdb
-C:\Users\Equipo\source\repos\Quiroga\QuirogaAPI\apiQuiroga.DA\bin\Debug\apiQuiroga.Models.dll.config
-C:\Users\Equipo\source\repos\Quiroga\QuirogaAPI\apiQuiroga.DA\bin\Debug\Newtonsoft.Json.xml
-C:\Users\Equipo\source\repos\Quiroga\QuirogaAPI\apiQuiroga.DA\bin\Debug\Microsoft.IdentityModel.Tokens.xml
-C:\Users\Equipo\source\repos\Quiroga\QuirogaAPI\apiQuiroga.DA\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
-C:\Users\Equipo\source\repos\Quiroga\QuirogaAPI\apiQuiroga.DA\bin\Debug\Microsoft.IdentityModel.Logging.xml
-C:\Users\Equipo\source\repos\Quiroga\QuirogaAPI\apiQuiroga.DA\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
-C:\Users\Equipo\source\repos\Quiroga\QuirogaAPI\apiQuiroga.DA\obj\Debug\apiQuiroga.DA.csproj.CopyComplete
-C:\Users\Equipo\source\repos\Quiroga\QuirogaAPI\apiQuiroga.DA\obj\Debug\apiQuiroga.DA.dll
-C:\Users\Equipo\source\repos\Quiroga\QuirogaAPI\apiQuiroga.DA\obj\Debug\apiQuiroga.DA.pdb
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga.DA\obj\Debug\apiQuiroga.DA.dll
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga.DA\obj\Debug\apiQuiroga.DA.pdb
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga.DA\bin\Debug\apiQuiroga.DA.dll.config
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga.DA\bin\Debug\apiQuiroga.DA.dll
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga.DA\bin\Debug\apiQuiroga.DA.pdb
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga.DA\bin\Debug\apiQuiroga.Models.dll
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga.DA\bin\Debug\Newtonsoft.Json.dll
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga.DA\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga.DA\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga.DA\bin\Debug\Microsoft.IdentityModel.Logging.dll
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga.DA\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga.DA\bin\Debug\apiQuiroga.Models.pdb
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga.DA\bin\Debug\apiQuiroga.Models.dll.config
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga.DA\bin\Debug\Newtonsoft.Json.xml
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga.DA\bin\Debug\Microsoft.IdentityModel.Tokens.xml
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga.DA\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga.DA\bin\Debug\Microsoft.IdentityModel.Logging.xml
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga.DA\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga.DA\obj\Debug\apiQuiroga.DA.csprojAssemblyReference.cache
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga.DA\obj\Debug\apiQuiroga.DA.Properties.Resources.resources
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga.DA\obj\Debug\apiQuiroga.DA.csproj.GenerateResource.cache
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga.DA\obj\Debug\apiQuiroga.DA.csproj.CoreCompileInputs.cache
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga.DA\obj\Debug\apiQuiroga.DA.csproj.CopyComplete
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga.DA\obj\Debug\apiQuiroga.DA.dll
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga.DA\obj\Debug\apiQuiroga.DA.pdb
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga.DA\bin\Debug\apiQuiroga.DA.dll.config
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga.DA\bin\Debug\apiQuiroga.DA.dll
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga.DA\bin\Debug\apiQuiroga.DA.pdb
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga.DA\bin\Debug\apiQuiroga.Models.dll
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga.DA\bin\Debug\Newtonsoft.Json.dll
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga.DA\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga.DA\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga.DA\bin\Debug\Microsoft.IdentityModel.Logging.dll
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga.DA\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga.DA\bin\Debug\apiQuiroga.Models.pdb
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga.DA\bin\Debug\apiQuiroga.Models.dll.config
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga.DA\bin\Debug\Newtonsoft.Json.xml
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga.DA\bin\Debug\Microsoft.IdentityModel.Tokens.xml
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga.DA\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga.DA\bin\Debug\Microsoft.IdentityModel.Logging.xml
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga.DA\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga.DA\obj\Debug\apiQuiroga.DA.csproj.AssemblyReference.cache
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga.DA\obj\Debug\apiQuiroga.DA.Properties.Resources.resources
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga.DA\obj\Debug\apiQuiroga.DA.csproj.GenerateResource.cache
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga.DA\obj\Debug\apiQuiroga.DA.csproj.CoreCompileInputs.cache
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga.DA\obj\Debug\apiQuiroga.DA.csproj.CopyComplete
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga.DA\obj\Debug\apiQuiroga.DA.dll
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga.DA\obj\Debug\apiQuiroga.DA.pdb
