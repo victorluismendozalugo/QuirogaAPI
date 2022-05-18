@@ -148,5 +148,41 @@ namespace apiQuiroga.DA
             }
         }
 
+        //Folio Pedido por Sucursal
+        public Result<int> ObtenFolioPedidoPorSucursal(PedidoModel p)
+        {
+            try
+            {
+                ConexionParameters parametros = new ConexionParameters();
+                parametros.Add("@pIdEmpresa", ConexionDbType.Int, p.idEmpresa);
+                parametros.Add("@pResultado", ConexionDbType.Bit, System.Data.ParameterDirection.Output);
+                parametros.Add("@pMsg", ConexionDbType.VarChar, 300, System.Data.ParameterDirection.Output, 300);
+                parametros.Add("@pCodError", ConexionDbType.Int, System.Data.ParameterDirection.Output);
+
+                int idPedidoEnc = _conexion.ExecuteScalar("QW_procObtenFolioPedidoPorSucursal", parametros).ToInt32();
+
+                return new Result<int>(true, "", idPedidoEnc);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public Result<List<BuscadorProductoPedidoModel>> Productos(string buscar, int codCliente, int codAgente)
+        {
+
+            var parametros = new ConexionParameters();
+            parametros.Add("@pBuscar", ConexionDbType.VarChar, buscar);
+            parametros.Add("@pcodCliente", ConexionDbType.Int, codCliente);
+            parametros.Add("@pCodAgente", ConexionDbType.Int, codAgente);
+            parametros.Add("@pResultado", ConexionDbType.Bit, System.Data.ParameterDirection.Output);
+            parametros.Add("@pMsg", ConexionDbType.VarChar, 300, System.Data.ParameterDirection.Output, 300);
+
+            var r = _conexion.ExecuteWithResults<BuscadorProductoPedidoModel>("QW_procArticulosBuscadorPedidoCon", parametros);
+
+            return r;
+        }
+
     }
 }

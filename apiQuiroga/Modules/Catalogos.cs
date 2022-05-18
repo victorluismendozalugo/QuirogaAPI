@@ -84,6 +84,7 @@ namespace apiQuiroga.Modules
 
             Post("/clientes", _ => Clientes());
             Post("/clientesFiltro", _ => ClientesFiltro());
+            Post("/clientesGuardar", _ => ClientesGuardar());
 
             Post("/agentes", _ => Agentes());
             Get("/agentes", _ => GetAgentes());
@@ -1275,6 +1276,42 @@ namespace apiQuiroga.Modules
                 {
                     Value = false,
                     Message = "Problemas en catalogo de clientes",
+                    Data = new DataModel()
+                    {
+                        CodigoError = 101,
+                        MensajeBitacora = ex.Message,
+                        Data = ""
+                    }
+                });
+            }
+        }
+
+        private object ClientesGuardar()
+        {
+            try
+            {
+                ClientesModel p = this.Bind();
+
+                var r = _DACatalogos.ClientesGuardar(p);
+
+                return Response.AsJson(new Result<DataModel>()
+                {
+                    Value = r.Value,
+                    Message = r.Message,
+                    Data = new DataModel()
+                    {
+                        CodigoError = r.Data.CodigoError,
+                        MensajeBitacora = r.Data.MensajeBitacora,
+                        Data = r.Data.Data
+                    }
+                });
+            }
+            catch (Exception ex)
+            {
+                return Response.AsJson(new Result<DataModel>()
+                {
+                    Value = false,
+                    Message = "Problemas al guardar cliente",
                     Data = new DataModel()
                     {
                         CodigoError = 101,

@@ -1355,7 +1355,6 @@ namespace apiQuiroga.DA
                 };
             }
         }
-
         public Result<DataModel> ClientesFiltros(string Filtro)
         {
             var parametros = new ConexionParameters();
@@ -1395,7 +1394,73 @@ namespace apiQuiroga.DA
                 };
             }
         }
+        public Result<DataModel> ClientesGuardar(ClientesModel Cliente)
+        {
+            var parametros = new ConexionParameters();
+            try
+            {
+                parametros.Add("@idCliente", ConexionDbType.Int, Cliente.ClienteID);
+                parametros.Add("@RazonSocial", ConexionDbType.VarChar, Cliente.ClienteRazonSocial, System.Data.ParameterDirection.Input, 70);
+                parametros.Add("@NombreCliente", ConexionDbType.VarChar, Cliente.ClienteNombre, System.Data.ParameterDirection.Input, 30);
+                parametros.Add("@ApPaternoCliente", ConexionDbType.VarChar, Cliente.ClienteApellidoP, System.Data.ParameterDirection.Input, 30);
+                parametros.Add("@ApMaternoCliente", ConexionDbType.VarChar, Cliente.ClienteApellidoM, System.Data.ParameterDirection.Input, 30);
+                parametros.Add("@Curp", ConexionDbType.VarChar, Cliente.ClienteCurp, System.Data.ParameterDirection.Input, 20);
+                parametros.Add("@Rfc", ConexionDbType.VarChar, Cliente.ClienteRfc, System.Data.ParameterDirection.Input, 15);
+                parametros.Add("@Telefono", ConexionDbType.VarChar, Cliente.ClienteTelefono, System.Data.ParameterDirection.Input, 20);
+                parametros.Add("@Email", ConexionDbType.VarChar, Cliente.ClienteEmail, System.Data.ParameterDirection.Input, 150);
+                parametros.Add("@IDGrupoClientes", ConexionDbType.Int, Cliente.ClienteGrupoClientes);
+                parametros.Add("@Saldo", ConexionDbType.Numeric, Cliente.ClienteSaldo, System.Data.ParameterDirection.Input);
+                parametros.Add("@Estatus", ConexionDbType.VarChar, Cliente.ClienteEstatus, System.Data.ParameterDirection.Input, 30);
+                parametros.Add("@DiaVisita", ConexionDbType.Int, Cliente.ClienteDiaVisita);
+                parametros.Add("@IDAgente", ConexionDbType.Int, Cliente.ClienteIdAgente);
+                parametros.Add("@usuario", ConexionDbType.VarChar, Cliente.Usuario, System.Data.ParameterDirection.Input, 12);
 
+                /*DATOS FISCALES*/
+                parametros.Add("@LimiteCredito", ConexionDbType.Decimal, Cliente.DatosFiscales.LimiteCredito);
+                parametros.Add("@PlazoPago", ConexionDbType.Int, Cliente.DatosFiscales.PlazoPago);
+                parametros.Add("@CuentaContable", ConexionDbType.Int, Cliente.DatosFiscales.CuentaContable);
+                parametros.Add("@IDBanco", ConexionDbType.Int, Cliente.DatosFiscales.IdBanco);
+                parametros.Add("@LimitePorFactura", ConexionDbType.Int, Cliente.DatosFiscales.LimitePorFactura);
+                parametros.Add("@FormaDePago", ConexionDbType.VarChar, Cliente.DatosFiscales.FormaDePago);
+                parametros.Add("@MetodoDePago", ConexionDbType.VarChar, Cliente.DatosFiscales.MetodoPago);
+                parametros.Add("@UsoCfdi", ConexionDbType.VarChar, Cliente.DatosFiscales.UsoCfdi);
+                parametros.Add("@TipoPersona", ConexionDbType.VarChar, Cliente.DatosFiscales.TipoPersona);
+                parametros.Add("@ResponsableFiscal", ConexionDbType.VarChar, Cliente.DatosFiscales.ResponsableFiscal);
+                parametros.Add("@EmailResponsable", ConexionDbType.VarChar, Cliente.DatosFiscales.EmailResponsable);
+
+                parametros.Add("@pResultado", ConexionDbType.Bit, System.Data.ParameterDirection.Output);
+                parametros.Add("@pMsg", ConexionDbType.VarChar, 300, System.Data.ParameterDirection.Output, 300);
+                parametros.Add("@pCodError", ConexionDbType.Int, System.Data.ParameterDirection.Output);
+
+                var r = _conexion2.ExecuteWithResults<ClientesModel>("QW_procClientesGuardar", parametros);
+
+                return new Result<DataModel>()
+                {
+                    Value = parametros.Value("@pResultado").ToBoolean(),
+                    Message = parametros.Value("@pMsg").ToString(),
+                    Data = new DataModel()
+                    {
+                        CodigoError = parametros.Value("@pCodError").ToInt32(),
+                        MensajeBitacora = parametros.Value("@pMsg").ToString(),
+                        Data = r.Data
+                    }
+                };
+            }
+            catch (Exception ex)
+            {
+                return new Result<DataModel>()
+                {
+                    Value = false,
+                    Message = "Problemas al guardar cliente",
+                    Data = new DataModel()
+                    {
+                        CodigoError = 101,
+                        MensajeBitacora = ex.Message,
+                        Data = ""
+                    }
+                };
+            }
+        }
         public Result<DataModel> ObtenEmpresas(int IDEmpresa)
         {
             var parametros = new ConexionParameters();
@@ -1432,7 +1497,6 @@ namespace apiQuiroga.DA
                 };
             }
         }
-
         public Result<DataModel> OperacionesSupervisadas(int claveEmpresa, string Menu)
         {
             var parametros = new ConexionParameters();

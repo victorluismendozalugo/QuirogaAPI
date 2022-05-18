@@ -88,6 +88,8 @@
       <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.6.6.0\lib\net461\System.IdentityModel.Tokens.Jwt.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -109,9 +111,24 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
     <None Include="Reportes\Movimientos\OrdenCompra.xsd">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="Web References\wsServifact\Comprobante.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\wsServifact\ConfiguracionEmpresa.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\wsServifact\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <None Include="Web References\wsServifact\servicios.wsdl" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -122,6 +139,7 @@
   <ItemGroup>
     <Content Include="dll\WarmPack.Database.dll" />
     <Content Include="dll\WarmPack.dll" />
+    <None Include="Web References\wsServifact\servicios.disco" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -138,7 +156,6 @@
     <Compile Include="Modules\Facturas.cs" />
     <Compile Include="Modules\CuentasPorPagar.cs" />
     <Compile Include="Modules\FacturasRecibidas.cs" />
-    <Compile Include="Modules\Movimientos.cs" />
     <Compile Include="Modules\ReciboMercancia.cs" />
     <Compile Include="Modules\Reportes.cs" />
     <Compile Include="Modules\RootModule.cs" />
@@ -146,11 +163,21 @@
     <Compile Include="Modules\Usuarios.cs" />
     <Compile Include="NancyExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\Movimientos\OrdenCompra.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>OrdenCompra.rpt</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Web References\wsServifact\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -175,6 +202,25 @@
       <Project>{cf0bfd64-9941-47d0-ae9c-08299371d800}</Project>
       <Name>apiQuiroga.Models</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://www.servifact.com.mx/timbradopruebas/servicios.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\wsServifact\</RelPath>
+      <UpdateFromURL>http://www.servifact.com.mx/timbradopruebas/servicios.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>apiQuiroga_wsServifact_Servicios</CachedSettingsPropName>
+    </WebReferenceUrl>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

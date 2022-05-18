@@ -120,6 +120,7 @@
     <Compile Include="Usuario\UsuarioMenuModel.cs" />
     <Compile Include="Usuario\UsuarioModel.cs" />
     <Compile Include="Usuario\UsuarioTokenRefreshModel.cs" />
+    <Compile Include="Ventas\CajasModel.cs" />
     <Compile Include="Ventas\VentasModel.cs" />
     <Compile Include="Ventas\FacturaModel.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">

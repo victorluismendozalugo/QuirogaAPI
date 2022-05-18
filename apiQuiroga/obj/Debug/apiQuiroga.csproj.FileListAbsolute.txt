@@ -96,6 +96,7 @@ C:\Quiroga\QuirogaAPI\apiQuiroga\bin\Nancy.Hosting.Aspnet.xml
 C:\Quiroga\QuirogaAPI\apiQuiroga\bin\Newtonsoft.Json.xml
 C:\Quiroga\QuirogaAPI\apiQuiroga\bin\System.IdentityModel.Tokens.Jwt.xml
 C:\Quiroga\QuirogaAPI\apiQuiroga\obj\Debug\apiQuiroga.csproj.CopyComplete
+<<<<<<< HEAD
 D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga\obj\Debug\apiQuiroga.csprojAssemblyReference.cache
 D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga\obj\Debug\apiQuiroga.dll
 D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga\obj\Debug\apiQuiroga.pdb
@@ -144,6 +145,8 @@ D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiro
 D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga\bin\Newtonsoft.Json.xml
 D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga\bin\System.IdentityModel.Tokens.Jwt.xml
 D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga\obj\Debug\apiQuiroga.csproj.CopyComplete
+=======
+>>>>>>> pedidos
 C:\git\QuirogaAPI\apiQuiroga\bin\apiQuiroga.dll.config
 C:\git\QuirogaAPI\apiQuiroga\bin\apiQuiroga.dll
 C:\git\QuirogaAPI\apiQuiroga\bin\apiQuiroga.pdb
@@ -193,3 +196,146 @@ C:\git\QuirogaAPI\apiQuiroga\obj\Debug\apiQuiroga.csproj.CoreCompileInputs.cache
 C:\git\QuirogaAPI\apiQuiroga\obj\Debug\apiQuiroga.csproj.CopyComplete
 C:\git\QuirogaAPI\apiQuiroga\obj\Debug\apiQuiroga.dll
 C:\git\QuirogaAPI\apiQuiroga\obj\Debug\apiQuiroga.pdb
+<<<<<<< HEAD
+=======
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga\obj\Debug\apiQuiroga.csprojAssemblyReference.cache
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga\bin\apiQuiroga.dll.config
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga\bin\apiQuiroga.dll
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga\bin\apiQuiroga.pdb
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga\bin\apiQuiroga.DA.dll
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga\bin\apiQuiroga.Models.dll
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga\bin\CrystalDecisions.CrystalReports.Engine.dll
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga\bin\CrystalDecisions.ReportSource.dll
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga\bin\CrystalDecisions.Shared.dll
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga\bin\Microsoft.IdentityModel.Logging.dll
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga\bin\Microsoft.IdentityModel.Tokens.dll
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga\bin\Nancy.Authentication.JwtBearer.dll
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga\bin\Nancy.Authentication.Stateless.dll
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga\bin\Nancy.dll
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga\bin\Nancy.Hosting.Aspnet.dll
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga\bin\Newtonsoft.Json.dll
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga\bin\System.IdentityModel.Tokens.Jwt.dll
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga\bin\WarmPack.dll
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga\bin\WarmPack.Database.dll
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga\bin\CrystalDecisions.ReportAppServer.DataDefModel.dll
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga\bin\CrystalDecisions.ReportAppServer.ClientDoc.dll
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga\bin\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga\bin\CrystalDecisions.ReportAppServer.Controllers.dll
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga\bin\CrystalDecisions.ReportAppServer.CommLayer.dll
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga\bin\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga\bin\CrystalDecisions.ReportAppServer.Prompting.dll
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga\bin\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga\bin\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga\bin\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga\bin\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga\bin\CrystalDecisions.ReportAppServer.CommonControls.dll
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga\bin\stdole.dll
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga\bin\apiQuiroga.DA.pdb
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga\bin\apiQuiroga.DA.dll.config
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga\bin\apiQuiroga.Models.pdb
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga\bin\apiQuiroga.Models.dll.config
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga\bin\Microsoft.IdentityModel.JsonWebTokens.xml
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga\bin\Microsoft.IdentityModel.Logging.xml
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga\bin\Microsoft.IdentityModel.Tokens.xml
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga\bin\Nancy.xml
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga\bin\Nancy.Authentication.Stateless.xml
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga\bin\Nancy.Hosting.Aspnet.xml
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga\bin\Newtonsoft.Json.xml
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga\bin\System.IdentityModel.Tokens.Jwt.xml
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga\obj\Debug\apiQuiroga.csproj.CopyComplete
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga\obj\Debug\apiQuiroga.dll
+D:\Respaldos\Fernando Zazueta\Desarrollo Quiroga\Quiroga DEV\QuirogaAPI\apiQuiroga\obj\Debug\apiQuiroga.pdb
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga\bin\apiQuiroga.dll.config
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga\bin\apiQuiroga.dll
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga\bin\apiQuiroga.pdb
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga\bin\apiQuiroga.DA.dll
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga\bin\apiQuiroga.Models.dll
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga\bin\Microsoft.IdentityModel.Logging.dll
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga\bin\Microsoft.IdentityModel.Tokens.dll
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga\bin\Nancy.Authentication.JwtBearer.dll
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga\bin\Nancy.Authentication.Stateless.dll
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga\bin\Nancy.dll
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga\bin\Nancy.Hosting.Aspnet.dll
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga\bin\Newtonsoft.Json.dll
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga\bin\WarmPack.dll
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga\bin\WarmPack.Database.dll
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga\bin\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga\bin\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga\bin\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga\bin\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga\bin\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga\bin\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga\bin\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga\bin\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga\bin\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga\bin\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga\bin\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga\bin\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga\bin\stdole.dll
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga\bin\apiQuiroga.DA.pdb
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga\bin\apiQuiroga.DA.dll.config
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga\bin\apiQuiroga.Models.pdb
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga\bin\apiQuiroga.Models.dll.config
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga\bin\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga\bin\Microsoft.IdentityModel.Logging.xml
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga\bin\Microsoft.IdentityModel.Tokens.xml
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga\bin\Nancy.xml
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga\bin\Nancy.Authentication.Stateless.xml
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga\bin\Nancy.Hosting.Aspnet.xml
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga\bin\Newtonsoft.Json.xml
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga\obj\Debug\apiQuiroga.csprojAssemblyReference.cache
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga\obj\Debug\apiQuiroga.csproj.CoreCompileInputs.cache
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga\obj\Debug\apiQuiroga.csproj.CopyComplete
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga\obj\Debug\apiQuiroga.dll
+C:\Users\OEM\Documents\Visual Studio 2019\Desarrollo\QuirogaAPI\apiQuiroga\obj\Debug\apiQuiroga.pdb
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga\bin\apiQuiroga.dll.config
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga\bin\apiQuiroga.dll
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga\bin\apiQuiroga.pdb
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga\bin\apiQuiroga.DA.dll
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga\bin\apiQuiroga.Models.dll
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga\bin\Microsoft.IdentityModel.Logging.dll
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga\bin\Microsoft.IdentityModel.Tokens.dll
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga\bin\Nancy.Authentication.JwtBearer.dll
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga\bin\Nancy.Authentication.Stateless.dll
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga\bin\Nancy.dll
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga\bin\Nancy.Hosting.Aspnet.dll
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga\bin\Newtonsoft.Json.dll
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga\bin\WarmPack.dll
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga\bin\WarmPack.Database.dll
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga\bin\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga\bin\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga\bin\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga\bin\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga\bin\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga\bin\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga\bin\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga\bin\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga\bin\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga\bin\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga\bin\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga\bin\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga\bin\stdole.dll
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga\bin\apiQuiroga.DA.pdb
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga\bin\apiQuiroga.DA.dll.config
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga\bin\apiQuiroga.Models.pdb
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga\bin\apiQuiroga.Models.dll.config
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga\bin\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga\bin\Microsoft.IdentityModel.Logging.xml
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga\bin\Microsoft.IdentityModel.Tokens.xml
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga\bin\Nancy.xml
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga\bin\Nancy.Authentication.Stateless.xml
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga\bin\Nancy.Hosting.Aspnet.xml
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga\bin\Newtonsoft.Json.xml
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga\obj\Debug\apiQuiroga.csproj.AssemblyReference.cache
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga\obj\Debug\apiQuiroga.csproj.CoreCompileInputs.cache
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga\obj\Debug\apiQuiroga.csproj.CopyComplete
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga\obj\Debug\apiQuiroga.dll
+C:\Personal\Desarrollo\DEVS\QuirogaAPI\apiQuiroga\obj\Debug\apiQuiroga.pdb
+>>>>>>> pedidos
