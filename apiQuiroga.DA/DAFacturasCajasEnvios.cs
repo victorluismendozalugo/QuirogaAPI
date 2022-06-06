@@ -44,6 +44,18 @@ namespace apiQuiroga.DA
 
             return r;
         }
+        public Result<List<FacturasCajasEnviosModel>> CajasMovimientosGuiasCon(FacturasCajasEnviosModel f)
+        {
+            var parametros = new ConexionParameters();
+            parametros.Add("@pIdMovimiento", ConexionDbType.Int, f.IdMovimiento);
+            parametros.Add("@pResultado", ConexionDbType.Bit, System.Data.ParameterDirection.Output);
+            parametros.Add("@pMsg", ConexionDbType.VarChar, 300, System.Data.ParameterDirection.Output, 300);
+            parametros.Add("@pCodError", ConexionDbType.Int, System.Data.ParameterDirection.Output);
+
+            var r = _conexion.ExecuteWithResults<FacturasCajasEnviosModel>("QW_procCajasMovimientosGuiasCon", parametros);
+
+            return r;
+        }
         public Result<List<FacturasCajasEnviosModel>> EstatusCajasCon(FacturasCajasEnviosModel fact)
         {
             var parametros = new ConexionParameters();
@@ -53,6 +65,17 @@ namespace apiQuiroga.DA
             parametros.Add("@pMsg", ConexionDbType.VarChar, 300, System.Data.ParameterDirection.Output, 300);
             parametros.Add("@pCodError", ConexionDbType.Int, System.Data.ParameterDirection.Output);
             var r = _conexion.ExecuteWithResults<FacturasCajasEnviosModel>("QW_procCajasEstatusCon", parametros);
+
+            return r;
+        }
+        public Result<List<FacturasCajasEnviosModel>> EstatusCajasGuiasCon(FacturasCajasEnviosModel fact)
+        {
+            var parametros = new ConexionParameters();
+            parametros.Add("@pGuia", ConexionDbType.VarChar, fact.Guia);
+            parametros.Add("@pResultado", ConexionDbType.Bit, System.Data.ParameterDirection.Output);
+            parametros.Add("@pMsg", ConexionDbType.VarChar, 300, System.Data.ParameterDirection.Output, 300);
+            parametros.Add("@pCodError", ConexionDbType.Int, System.Data.ParameterDirection.Output);
+            var r = _conexion.ExecuteWithResults<FacturasCajasEnviosModel>("QW_procCajasGuiasEstatusCon", parametros);
 
             return r;
         }
