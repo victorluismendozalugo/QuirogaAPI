@@ -33,9 +33,10 @@ namespace apiQuiroga.DA
             return r;
         }
 
-        public Result<List<FacturasCajasEnviosModel>> CajasMovimientosCon()
+        public Result<List<FacturasCajasEnviosModel>> CajasMovimientosCon(FacturasCajasEnviosModel dat)
         {
             var parametros = new ConexionParameters();
+            parametros.Add("@pIDOrigen", ConexionDbType.Int, dat.IDOrigen);
             parametros.Add("@pResultado", ConexionDbType.Bit, System.Data.ParameterDirection.Output);
             parametros.Add("@pMsg", ConexionDbType.VarChar, 300, System.Data.ParameterDirection.Output, 300);
             parametros.Add("@pCodError", ConexionDbType.Int, System.Data.ParameterDirection.Output);

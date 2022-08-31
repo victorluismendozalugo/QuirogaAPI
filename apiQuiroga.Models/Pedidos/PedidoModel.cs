@@ -11,6 +11,7 @@ namespace apiQuiroga.Models.Pedidos
         public int idPedidoEnc { get; set; }
         public int idCliente { get; set; }
         public int idEmpresa { get; set; }
+        public string cve_Sucursal { get; set; }
         public int idAgente { get; set; }
         public DateTime fechaPedido { get; set; }
         public string estatus { get; set; }
