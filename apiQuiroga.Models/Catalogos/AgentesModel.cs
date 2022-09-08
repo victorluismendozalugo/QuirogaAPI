@@ -31,6 +31,7 @@ namespace apiQuiroga.Models.Catalogos
         public int IDAgente { get; set; }
         public string Nombre { get; set; }
         public string Estatus { get; set; }
+        public string Usuario { get; set; }
         public int IDCedis { get; set; }
         public int SAIAgente { get; set; }
     }
