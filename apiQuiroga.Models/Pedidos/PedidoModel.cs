@@ -9,6 +9,7 @@ namespace apiQuiroga.Models.Pedidos
     public class PedidoModel
     {
         public int idPedidoEnc { get; set; }
+        public string cve_Sucursal { get; set; }
         public int idCliente { get; set; }
         public int idEmpresa { get; set; }
         public int idAgente { get; set; }
@@ -17,8 +18,10 @@ namespace apiQuiroga.Models.Pedidos
         public decimal totalPedido { get; set; }
         public decimal subTotalPedido { get; set; }
         public decimal iva { get; set; }
-        public string observaciones{ get; set; }   
+        public string observaciones { get; set; }
         public string adicionadoPor { get; set; }
+        public string cveAlmacen { get; set; }
+
         public List<PedidoDetalleModel> pedidoDetalle { get; set; }
 
     }

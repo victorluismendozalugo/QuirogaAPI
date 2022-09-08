@@ -149,6 +149,7 @@
     <Compile Include="Modules\BuscadoresModule.cs" />
     <Compile Include="Modules\Catalogos.cs" />
     <Compile Include="Modules\Configuracion.cs" />
+    <Compile Include="Modules\PedidosSAIModule.cs" />
     <Compile Include="Modules\ProductosModule.cs" />
     <Compile Include="Modules\Ventas.cs" />
     <Compile Include="Modules\Movimientos.cs" />

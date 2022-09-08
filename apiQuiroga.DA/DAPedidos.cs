@@ -179,7 +179,7 @@ namespace apiQuiroga.DA
             parametros.Add("@pResultado", ConexionDbType.Bit, System.Data.ParameterDirection.Output);
             parametros.Add("@pMsg", ConexionDbType.VarChar, 300, System.Data.ParameterDirection.Output, 300);
 
-            var r = _conexion.ExecuteWithResults<BuscadorProductoPedidoModel>("QW_procArticulosBuscadorPedidoCon", parametros);
+            var r = _conexion2.ExecuteWithResults<BuscadorProductoPedidoModel>("QW_procArticulosBuscadorPedidoCon", parametros);
 
             return r;
         }
