@@ -53,6 +53,9 @@
       <HintPath>..\packages\Microsoft.IdentityModel.Tokens.6.6.0\lib\net461\Microsoft.IdentityModel.Tokens.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Nancy, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nancy.2.0.0\lib\net452\Nancy.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
@@ -112,7 +115,6 @@
     <Compile Include="Movimientos\CuentasXPModel.cs" />
     <Compile Include="Movimientos\FacturasRecibidasModel.cs" />
     <Compile Include="Movimientos\OrdenCompraModel.cs" />
-    <Compile Include="PedidosSAIModule.cs" />
     <Compile Include="Pedidos\PedidoModel.cs" />
     <Compile Include="Movimientos\ReciboMercanciaModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -195,16 +195,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\apiQuiroga.DA\apiQuiroga.DA.csproj">
-      <Project>{F9C66A5F-9FAE-4B6E-B639-D86158060983}</Project>
-      <Name>apiQuiroga.DA</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\apiQuiroga.Models\apiQuiroga.Models.csproj">
-      <Project>{cf0bfd64-9941-47d0-ae9c-08299371d800}</Project>
-      <Name>apiQuiroga.Models</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
@@ -222,6 +212,16 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>apiQuiroga_wsServifact_Servicios</CachedSettingsPropName>
     </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\apiQuiroga.DA\apiQuiroga.DA.csproj">
+      <Project>{f9c66a5f-9fae-4b6e-b639-d86158060983}</Project>
+      <Name>apiQuiroga.DA</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\apiQuiroga.Models\apiQuiroga.Models.csproj">
+      <Project>{cf0bfd64-9941-47d0-ae9c-08299371d800}</Project>
+      <Name>apiQuiroga.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
