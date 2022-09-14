@@ -33,7 +33,7 @@ namespace apiQuiroga.Modules
 
             Post("/facturas", _ => FacturasCon());
             Post("/cajas/movimiento", _ => CajasMovimientosGuardar());
-            Get("/cajas/movimiento", _ => CajasMovimientosCon());
+            Get("/cajas/movimiento/{IDOrigen}", _ => CajasMovimientosCon());
             Post("/cajas/movimiento/guia", _ => CajasMovimientosGuiasCon());
             Get("/cajas/estatus/{IDCaja1}/{IDOrigen}", _ => CajasEstatusCon());
             Get("/guias/estatus/{Guia}", _ => CajasEstatusGuiasCon());
@@ -244,7 +244,7 @@ namespace apiQuiroga.Modules
         private object CajasMovimientosCon()
         {
             var dat = this.Bind<FacturasCajasEnviosModel>();
-            var result = _DAFacturas.CajasMovimientosCon();
+            var result = _DAFacturas.CajasMovimientosCon(dat);
             return Response.AsJson(result);
         }
         

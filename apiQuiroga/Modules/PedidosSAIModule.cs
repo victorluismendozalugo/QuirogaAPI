@@ -33,7 +33,7 @@ namespace apiQuiroga.Modules
             {
                 PedidoModel p = this.Bind();
 
-                var r = _DAPedidosSAI.PedidoSAIGuardar(p.idPedidoEnc, p.idCliente, p.cve_Sucursal, p.cveAlmacen);
+                var r = _DAPedidosSAI.PedidoSAIGuardar(p.idPedidoEnc, p.idCliente, p.idAgente, p.cve_Sucursal);
 
                 return Response.AsJson(new Result<DataModel>()
                 {
